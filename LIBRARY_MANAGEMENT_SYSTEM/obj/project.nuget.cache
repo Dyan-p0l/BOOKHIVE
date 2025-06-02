@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "1W/CZ+JRaAA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\john paul\\source\\repos\\LIBRARY_MANAGEMENT_SYSTEM\\LIBRARY_MANAGEMENT_SYSTEM\\LIBRARY_MANAGEMENT_SYSTEM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\john paul\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
+    "C:\\Users\\john paul\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.1.0\\mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
+    "C:\\Users\\john paul\\.nuget\\packages\\mahapps.metro.iconpacks.fontawesome\\5.1.0\\mahapps.metro.iconpacks.fontawesome.5.1.0.nupkg.sha512",
+    "C:\\Users\\john paul\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FontAwesome.WPF 4.7.0.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}

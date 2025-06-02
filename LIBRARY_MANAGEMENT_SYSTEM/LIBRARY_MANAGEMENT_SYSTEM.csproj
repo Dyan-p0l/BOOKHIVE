@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\img-vectors\login.png" />
+    <None Remove="resources\img-vectors\logLib.png" />
+    <None Remove="resources\img-vectors\logoLib.png" />
+    <None Remove="resources\img-vectors\logoYel.png" />
+    <None Remove="resources\img-vectors\register.png" />
+    <None Remove="resources\img-vectors\registration.png" />
+    <None Remove="resources\img-vectors\regLib.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\img-vectors\login.png" />
+    <Resource Include="resources\img-vectors\logLib.png" />
+    <Resource Include="resources\img-vectors\logoLib.png" />
+    <Resource Include="resources\img-vectors\logoYel.png" />
+    <Resource Include="resources\img-vectors\registration.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\img-vectors\regLib.png" />
+  </ItemGroup>
+
+</Project>
