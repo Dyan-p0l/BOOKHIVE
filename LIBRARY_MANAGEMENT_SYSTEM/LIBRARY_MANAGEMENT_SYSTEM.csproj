@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -20,13 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
     <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="5.1.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
-<<<<<<< HEAD
-=======
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
->>>>>>> 28c9166e5e55edf015a005f742faa852a124e6dc
   </ItemGroup>
 
   <ItemGroup>

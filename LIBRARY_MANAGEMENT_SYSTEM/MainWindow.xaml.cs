@@ -57,7 +57,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         if (result > 0)
                         {
                             MessageBox.Show("Login successful!");
-                            // Navigate to main window or dashboard
+                            UserDashboard user = new UserDashboard();
+                            user.Show();
+                            this.Close();
                         }
                         else
                         {

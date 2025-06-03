@@ -4,11 +4,72 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
 
         Title="UserDashboard" Height="730" Width="1060">
     <Grid>
-        
+        <Grid Background="#FFD32C" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1060">
+            <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239">
+                <Image Source="/resources/img-vectors/logoLib.png" HorizontalAlignment="Left" Height="63" Margin="28,0,0,0" VerticalAlignment="Center" Width="206" RenderTransformOrigin="0.505,1.025"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="46" Margin="762,0,0,0" VerticalAlignment="Center" Width="270">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="40" Height="40" Margin="0,0,15,0" VerticalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="Welcome User" FontSize="24" FontWeight="Black" VerticalAlignment="Center" Foreground="Black" />
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+        <Grid Background="#383333" HorizontalAlignment="Left" Height="617" Margin="0,97,0,0" VerticalAlignment="Top" Width="182">
+            <Grid HorizontalAlignment="Left" Height="91" Margin="0,32,0,0" VerticalAlignment="Top" Width="165">
+                <Button Background="#FFD32C" HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <iconPacks:PackIconFontAwesome Kind="HouseSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0"/>
+                        <TextBlock Text="Home" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="91" Margin="0,142,0,0" VerticalAlignment="Top" Width="165">
+                <Button HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" BorderBrush="#00707070" Background="#00DDDDDD">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0" Foreground="White"/>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Account" FontWeight="Bold" FontSize="16" Foreground="White" />
+                            <TextBlock Text="Settings" FontWeight="Bold" FontSize="16" Foreground="White" />
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="91" Margin="0,252,0,0" VerticalAlignment="Top" Width="165">
+                <Button HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" Foreground="#00000000" Background="#00DDDDDD" BorderBrush="#00707070">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <iconPacks:PackIconFontAwesome Kind="BookSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0" Foreground="White"/>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Manage" FontWeight="Bold" FontSize="16" Foreground="White" />
+                            <TextBlock Text="Books" FontWeight="Bold" FontSize="16" Foreground="White" />
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="91" Margin="0,362,0,0" VerticalAlignment="Top" Width="165">
+                <Button HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" Background="#00DDDDDD" BorderBrush="#00707070">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <iconPacks:PackIconFontAwesome Kind="ClockRotateLeftSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0" Foreground="#FFFCFCFC"/>
+                        <TextBlock Text="History" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FFFCFCFC" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="91" Margin="0,511,0,0" VerticalAlignment="Top" Width="165">
+                <Button HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" Background="#00DDDDDD" BorderBrush="#00707070">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <iconPacks:PackIconFontAwesome Kind="PowerOffSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0" Foreground="White"/>
+                        <TextBlock Text="LOGOUT" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="White" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+
     </Grid>
 </Window>

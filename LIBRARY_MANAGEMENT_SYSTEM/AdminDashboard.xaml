@@ -72,7 +72,6 @@
                 </Button>
             </Grid>
         </Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="-71,443,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
