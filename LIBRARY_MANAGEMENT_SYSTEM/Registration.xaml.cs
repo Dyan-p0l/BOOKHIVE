@@ -94,9 +94,15 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         if (result > 0)
                         {
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+<<<<<<< HEAD
                             MainWindow login = new MainWindow();
                             login.Show();
                             this.Close();
+=======
+                            MainWindow main = new MainWindow();
+                            main.Show();
+                            this.Close(); // or redirect to login screen
+>>>>>>> 0d84f0e25b29c11f70fdc1d976e6b4d8a5170a4a
                         }
                         else
                         {
