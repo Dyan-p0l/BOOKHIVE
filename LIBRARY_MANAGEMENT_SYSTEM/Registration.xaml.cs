@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data.SqlClient;
+using LIBRARY_MANAGEMENT_SYSTEM.backend;
+using Microsoft.Data.SqlClient;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
@@ -30,8 +31,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // Inputs
             string fullname = txtFullname.Text.Trim();
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text;
-            string confpassword = txtconfPassword.Text;
+            string password = txtPassword.Password;
+            string confpassword = txtconfPassword.Password;
 
             // Check if all fields are empty
             if (string.IsNullOrWhiteSpace(fullname) &&
@@ -59,34 +60,51 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 return;
             }
 
-            string connectionString = @"Data Source=Jaydee\SQLEXPRESS;Initial Catalog=bookhiveDB;Integrated Security=True;TrustServerCertificate=True;";
-            string query = "INSERT INTO Users (Fullname, Username, Password) VALUES (@Fullname, @Username, @Password)";
-
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                dbConnection db = new dbConnection();
+                using (SqlConnection connection = db.GetConnection())
                 {
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Fullname", fullname);
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password); 
-
                     connection.Open();
-                    int result = command.ExecuteNonQuery();
 
-                    if (result > 0)
+                    // Check if username already exists
+                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
-                        MessageBox.Show("Registration successful!");
+                        checkCmd.Parameters.AddWithValue("@Username", username);
+                        int userExists = (int)checkCmd.ExecuteScalar();
+                        if (userExists > 0)
+                        {
+                            MessageBox.Show("Username already exists. Please choose another one.", "Registration Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            return;
+                        }
                     }
-                    else
+
+                    // Insert new user
+                    string insertQuery = "INSERT INTO Users (FullName, Username, Password) VALUES (@Fullname, @Username, @Password)";
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
-                        MessageBox.Show("Registration failed.");
+                        insertCmd.Parameters.AddWithValue("@Fullname", fullname);
+                        insertCmd.Parameters.AddWithValue("@Username", username);
+                        insertCmd.Parameters.AddWithValue("@Password", password); // For production, hash passwords!
+
+                        int result = insertCmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close(); // or redirect to login screen
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registration failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"An error occurred:\n{ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
