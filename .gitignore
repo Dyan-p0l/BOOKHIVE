@@ -1,0 +1,42 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio folder and files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.pdb
+*.exe
+*.dll
+*.cache
+*.log
+
+# NuGet packages folder (if using packages folder, else can be omitted)
+packages/
+
+# Rider IDE files (if you ever use JetBrains Rider)
+.idea/
+
+# DotCover files
+*.dotCover
+
+# ReSharper files
+_ReSharper*/
+*.DotSettings.user
+
+# Publish output folder (if any)
+publish/
+
+# Others
+*.db
+*.bak
+*.tmp
+*.log
+
+# Node modules if your project uses node in any way (unlikely in WPF but just in case)
+node_modules/
