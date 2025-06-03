@@ -33,6 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password;
             string confpassword = txtconfPassword.Password;
+            string userType = "User";
 
             // Check if all fields are empty
             if (string.IsNullOrWhiteSpace(fullname) &&
@@ -81,13 +82,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     }
 
                     // Insert new user
-                    string insertQuery = "INSERT INTO Users (FullName, Username, Password) VALUES (@Fullname, @Username, @Password)";
+                    string insertQuery = "INSERT INTO Users (FullName, Username, Password, UserType) VALUES (@Fullname, @Username, @Password, @UserType)";
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
                         insertCmd.Parameters.AddWithValue("@Fullname", fullname);
                         insertCmd.Parameters.AddWithValue("@Username", username);
                         insertCmd.Parameters.AddWithValue("@Password", password); // For production, hash passwords!
-
+                        insertCmd.Parameters.AddWithValue("@UserType", userType);
                         int result = insertCmd.ExecuteNonQuery();
 
                         if (result > 0)
