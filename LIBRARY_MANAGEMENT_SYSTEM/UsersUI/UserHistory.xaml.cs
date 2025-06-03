@@ -15,15 +15,15 @@ using System.Windows.Shapes;
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     /// <summary>
-    /// Interaction logic for UserDashboard.xaml
+    /// Interaction logic for UserHistory.xaml
     /// </summary>
-    public partial class UserDashboard : Window
+    public partial class UserHistory : Window
     {
-        public UserDashboard()
+        public UserHistory()
         {
             InitializeComponent();
         }
 
- 
+
     }
 }
