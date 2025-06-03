@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 {
     /// <summary>
-    /// Interaction logic for BookManage.xaml
+    /// Interaction logic for AdminHomepage.xaml
     /// </summary>
-    public partial class BookManage : Page
+    public partial class AdminHomepage : Page
     {
-        public BookManage()
+        public AdminHomepage()
         {
             InitializeComponent();
         }

@@ -17,13 +17,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
     /// <summary>
     /// Interaction logic for UserBooks.xaml
     /// </summary>
-    public partial class UserBooks : Window
+    public partial class UserBooks : Page
     {
         public UserBooks()
         {
             InitializeComponent();
         }
-
 
     }
 }

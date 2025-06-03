@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.IconPacks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,91 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     /// </summary>
     public partial class AdminDashboard : Window
     {
+        
         public AdminDashboard()
         {
             InitializeComponent();
+            AdminContentFrame.Navigate(new AdminUI.AdminHomepage());
+            SetActiveButton(home);
         }
 
+        private void SetActiveButton(Button activeButton)
+        {
+            var buttons = new List<Button> { home, accountsBtn, booksBtn, historyBtn, logoutBtn};
+
+            foreach (var btn in buttons)
+            {
+                bool isActive = (btn == activeButton);
+
+                btn.Background = isActive
+                    ? new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD32C"))
+                    : new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00DDDDDD"));
+
+                if (btn.Content is StackPanel sp)
+                {
+                    var textBlocks = FindVisualChildren<TextBlock>(sp);
+                    var icons = FindVisualChildren<PackIconFontAwesome>(sp);
+                    foreach (var tb in textBlocks)
+                    {
+                        tb.Foreground = isActive
+                            ? new SolidColorBrush(Colors.Black)
+                            : new SolidColorBrush(Colors.White);
+                    }
+                    foreach (var icon in icons)
+                    {
+                        icon.Foreground = isActive
+                            ? new SolidColorBrush(Colors.Black)
+                            : new SolidColorBrush(Colors.White);
+                    }
+
+                }
+            }
+        }
+
+        public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T t)
+                    {
+                        yield return t;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
+        private void homeButton(object sender, RoutedEventArgs e)
+        {
+            AdminContentFrame.Navigate(new AdminUI.AdminHomepage());
+            SetActiveButton(home);
+        }   
+        
+        
+        private void accountManage(object sender, RoutedEventArgs e)
+        {
+            AdminContentFrame.Navigate(new AdminUI.AccountManage());
+            SetActiveButton(accountsBtn);
+        }
+
+        private void bookManage(object sender, RoutedEventArgs e)
+        {
+            AdminContentFrame.Navigate(new AdminUI.BookManage());
+            SetActiveButton(booksBtn);
+        }
+
+        private void historyManage(object sender, RoutedEventArgs e)
+        {
+            AdminContentFrame.Navigate(new AdminUI.HistoryManage());
+            SetActiveButton(historyBtn);
+        }
   
     }
 }

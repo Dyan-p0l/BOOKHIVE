@@ -13,6 +13,9 @@
     <Compile Update="AdminUI\AccountManage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AdminUI\AdminHomepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AdminUI\BookManage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,12 +37,18 @@
     <Compile Update="UsersUI\UserHistory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UsersUI\UserHomepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminUI\AdminDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUI\AccountManage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\AdminHomepage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUI\BookManage.xaml">
@@ -64,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\UserHistory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\UserHomepage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

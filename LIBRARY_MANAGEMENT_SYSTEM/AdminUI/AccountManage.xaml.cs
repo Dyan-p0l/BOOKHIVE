@@ -17,7 +17,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
     /// <summary>
     /// Interaction logic for AccountManage.xaml
     /// </summary>
-    public partial class AccountManage : Window
+    public partial class AccountManage : Page
     {
         public AccountManage()
         {

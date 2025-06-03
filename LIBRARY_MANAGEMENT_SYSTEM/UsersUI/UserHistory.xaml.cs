@@ -12,18 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM
+namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 {
-    /// <summary>
-    /// Interaction logic for UserHistory.xaml
-    /// </summary>
-    public partial class UserHistory : Window
+   
+    public partial class UserHistory : Page
     {
         public UserHistory()
         {
             InitializeComponent();
         }
 
-
+        
     }
 }

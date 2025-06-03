@@ -17,7 +17,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
     /// <summary>
     /// Interaction logic for HistoryManage.xaml
     /// </summary>
-    public partial class HistoryManage : Window
+    public partial class HistoryManage : Page
     {
         public HistoryManage()
         {

@@ -17,7 +17,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
     /// <summary>
     /// Interaction logic for UserAccount.xaml
     /// </summary>
-    public partial class UserAccount : Window
+    public partial class UserAccount : Page
     {
         public UserAccount()
         {

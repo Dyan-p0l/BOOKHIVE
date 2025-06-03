@@ -45,7 +45,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 return;
             }
 
-            
             if (string.IsNullOrWhiteSpace(fullname) ||
                 string.IsNullOrWhiteSpace(username) ||
                 string.IsNullOrWhiteSpace(password) ||

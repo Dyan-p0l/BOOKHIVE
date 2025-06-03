@@ -12,14 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
+namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 {
-    /// <summary>
-    /// Interaction logic for BookManage.xaml
-    /// </summary>
-    public partial class BookManage : Page
+
+    public partial class UserHomepage : Page
     {
-        public BookManage()
+        public UserHomepage()
         {
             InitializeComponent();
         }
