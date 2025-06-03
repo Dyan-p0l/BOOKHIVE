@@ -18,7 +18,7 @@
                         <ColumnDefinition Width="313*"/>
                         <ColumnDefinition Width="145*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="txtFullname" HorizontalAlignment="Left" Margin="58,46,0,0" VerticalAlignment="Top" Width="328" Height="44" FontSize="22" FontFamily="Segoe UI Black" Grid.ColumnSpan="2" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
+                    <TextBox VerticalContentAlignment="Center" x:Name="txtFullname" HorizontalAlignment="Left" Margin="58,46,0,0" VerticalAlignment="Top" Width="328" Height="44" FontSize="22" FontFamily="Segoe UI Black" Grid.ColumnSpan="2" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
                         <TextBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                         </TextBox.Effect>
@@ -26,19 +26,19 @@
                     <Label Content="Enter Full name:" HorizontalAlignment="Left" Margin="60,7,0,0" VerticalAlignment="Top" Height="49" Width="178" FontSize="20" FontFamily="Segoe UI Black" Foreground="Black"/>
                     <Label Content="Enter Password:" HorizontalAlignment="Left" Margin="60,195,0,0" VerticalAlignment="Top" Height="49" Width="300" FontSize="20" FontFamily="Segoe UI Black" Foreground="Black" Grid.ColumnSpan="2"/>
                     <Label Content="Enter Username:" HorizontalAlignment="Left" Margin="60,100,0,0" VerticalAlignment="Top" Height="49" Width="178" FontSize="20" FontFamily="Segoe UI Black" Foreground="Black"/>
-                    <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="58,139,0,0" VerticalAlignment="Top" Width="328" Height="44" FontSize="22" FontFamily="Segoe UI Black" Grid.ColumnSpan="2" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
+                    <TextBox VerticalContentAlignment="Center" x:Name="txtUsername" HorizontalAlignment="Left" Margin="58,139,0,0" VerticalAlignment="Top" Width="328" Height="44" FontSize="22" FontFamily="Segoe UI Black" Grid.ColumnSpan="2" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
                         <TextBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                         </TextBox.Effect>
                     </TextBox>
-                    <PasswordBox x:Name="txtPassword" Margin="58,234,72,0" VerticalAlignment="Top" Height="44" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6" Grid.ColumnSpan="2">
+                    <PasswordBox VerticalContentAlignment="Center" x:Name="txtPassword" Margin="58,234,72,0" VerticalAlignment="Top" Height="44" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6" Grid.ColumnSpan="2">
                         <PasswordBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                         </PasswordBox.Effect>
                     </PasswordBox>
 
                     <Label Content="Confirm Password:" HorizontalAlignment="Left" Margin="60,287,0,0" VerticalAlignment="Top" Height="49" Width="300" FontSize="20" FontFamily="Segoe UI Black" Foreground="Black" Grid.ColumnSpan="2"/>
-                    <PasswordBox x:Name="txtconfPassword" Margin="58,326,72,0" VerticalAlignment="Top" Height="44" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6" Grid.ColumnSpan="2">
+                    <PasswordBox VerticalContentAlignment="Center" x:Name="txtconfPassword" Margin="58,326,72,0" VerticalAlignment="Top" Height="44" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6" Grid.ColumnSpan="2">
                         <PasswordBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                         </PasswordBox.Effect>

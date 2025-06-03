@@ -10,7 +10,7 @@
 
         Title="UserDashboard" Height="730" Width="1060">
     <Grid>
-        <Grid Background="#FFD32C" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1060">
+        <Grid Background="#FFFFCE5C" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1060">
             <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239">
                 <Image Source="/resources/img-vectors/logoLib.png" HorizontalAlignment="Left" Height="63" Margin="28,0,0,0" VerticalAlignment="Center" Width="206" RenderTransformOrigin="0.505,1.025"/>
             </Grid>
@@ -69,6 +69,10 @@
                     </StackPanel>
                 </Button>
             </Grid>
+        </Grid>
+        <Grid Background="Aqua" HorizontalAlignment="Left" Height="487" Margin="182,217,0,0" VerticalAlignment="Top" Width="878"/>
+        <Grid Background="Aquamarine" HorizontalAlignment="Left" Height="95" Margin="189,110,0,0" VerticalAlignment="Top" Width="863">
+            <TextBox HorizontalAlignment="Left" Margin="214,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="453" Height="41"/>
         </Grid>
 
     </Grid>

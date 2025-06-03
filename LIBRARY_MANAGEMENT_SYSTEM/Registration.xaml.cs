@@ -94,7 +94,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         if (result > 0)
                         {
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                            this.Close(); // or redirect to login screen
+                            MainWindow login = new MainWindow();
+                            login.Show();
+                            this.Close();
                         }
                         else
                         {
@@ -108,7 +110,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 MessageBox.Show($"An error occurred:\n{ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
 
     }
 }
