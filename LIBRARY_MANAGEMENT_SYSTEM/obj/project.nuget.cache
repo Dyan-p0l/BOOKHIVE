@@ -1,13 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "1W/CZ+JRaAA=",
+  "dgSpecHash": "ulJ9qOSqCxg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\john paul\\source\\repos\\LIBRARY_MANAGEMENT_SYSTEM\\LIBRARY_MANAGEMENT_SYSTEM\\LIBRARY_MANAGEMENT_SYSTEM.csproj",
+  "projectFilePath": "C:\\Users\\dvdiv\\Desktop\\career dev\\3RD YEAR SECOND SEM\\Soft Dev 2\\BOOKHIVE\\LIBRARY_MANAGEMENT_SYSTEM\\LIBRARY_MANAGEMENT_SYSTEM.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\john paul\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
-    "C:\\Users\\john paul\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.1.0\\mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
-    "C:\\Users\\john paul\\.nuget\\packages\\mahapps.metro.iconpacks.fontawesome\\5.1.0\\mahapps.metro.iconpacks.fontawesome.5.1.0.nupkg.sha512",
-    "C:\\Users\\john paul\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
+    "C:\\Users\\dvdiv\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.1.0\\mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\mahapps.metro.iconpacks.fontawesome\\5.1.0\\mahapps.metro.iconpacks.fontawesome.5.1.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512",
+    "C:\\Users\\dvdiv\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
   ],
   "logs": [
     {

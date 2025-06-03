@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="resources\img-vectors\login.png" />
     <None Remove="resources\img-vectors\logLib.png" />
+    <None Remove="resources\img-vectors\logo-bookhive.ico" />
     <None Remove="resources\img-vectors\logoLib.png" />
     <None Remove="resources\img-vectors\logoYel.png" />
     <None Remove="resources\img-vectors\register.png" />
@@ -21,11 +22,13 @@
   <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
     <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="5.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="resources\img-vectors\login.png" />
     <Resource Include="resources\img-vectors\logLib.png" />
+    <Resource Include="resources\img-vectors\logo-bookhive.ico" />
     <Resource Include="resources\img-vectors\logoLib.png" />
     <Resource Include="resources\img-vectors\logoYel.png" />
     <Resource Include="resources\img-vectors\registration.png">

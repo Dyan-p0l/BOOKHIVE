@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="730" Width="930">
+        Title="BookHive" Height="730" Width="930" Icon="/resources/img-vectors/logo-bookhive.ico">
     <Grid>
         <Grid Margin="465,0,0,0" Width="462">
             <Image Source="/resources/img-vectors/logLib.png" Margin="-29,0,-52,0"/>
