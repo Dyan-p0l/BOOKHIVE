@@ -10,7 +10,7 @@
     <Grid>
 
         <Grid HorizontalAlignment="Left" Height="95" Margin="0,10,0,0" VerticalAlignment="Top" Width="863">
-            <TextBox VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="171,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3">
+            <TextBox Padding="10"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="171,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>

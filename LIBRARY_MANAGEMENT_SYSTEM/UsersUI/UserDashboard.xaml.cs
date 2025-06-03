@@ -107,6 +107,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             SetActiveButton(HomeButton);
         }
 
+        private void logOut(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+            "Are you sure you want to log out?",
+            "Confirm Logout",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question
+);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                MainWindow login = new MainWindow();
+                login.Show();
+                this.Close();
+            }
+        }
 
     }
 }

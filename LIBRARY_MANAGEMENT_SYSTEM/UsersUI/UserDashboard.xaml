@@ -95,7 +95,7 @@
                 </Button>
             </Grid>
             <Grid HorizontalAlignment="Left" Height="91" Margin="0,511,0,0" VerticalAlignment="Top" Width="165">
-                <Button x:Name="LogoutButton" HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" Background="#00DDDDDD" BorderBrush="#00707070">
+                <Button Click="logOut" x:Name="LogoutButton" HorizontalAlignment="Center" Height="90" VerticalAlignment="Center" Width="165" Background="#00DDDDDD" BorderBrush="#00707070">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <iconPacks:PackIconFontAwesome Kind="PowerOffSolid" Width="40" Height="40" RenderTransformOrigin="0.72,0.981" Margin="0,0,15,0" Foreground="White"/>
                         <TextBlock Text="LOGOUT" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="White" />

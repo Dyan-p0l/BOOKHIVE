@@ -18,14 +18,14 @@
                     <Image Source="/resources/img-vectors/logoLib.png" HorizontalAlignment="Left" Height="57" Margin="48,10,0,0" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.412,-0.001"/>
                 </Grid>
                 <Grid Background="White" HorizontalAlignment="Center" Height="298" VerticalAlignment="Top" Width="458" Margin="0,210,0,0">
-                    <TextBox x:Name="txtUsername" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402" Height="56" FontSize="22" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6">
+                    <TextBox Padding="10" x:Name="txtUsername" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402" Height="56" FontSize="22" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6">
                         <TextBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                         </TextBox.Effect>
                     </TextBox>
                     <Label Content="Username:" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Height="49" Width="178" FontSize="24" FontFamily="Arial Black" Foreground="Black"/>
                     <Label Content="Password:" HorizontalAlignment="Left" Margin="28,147,0,0" VerticalAlignment="Top" Height="49" Width="178" FontSize="24" FontFamily="Arial Black" Foreground="Black"/>
-                    <PasswordBox x:Name="txtPassword" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="53" Margin="0,199,0,0" VerticalAlignment="Top" Width="401" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6">
+                    <PasswordBox Padding="10" x:Name="txtPassword" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="53" Margin="0,199,0,0" VerticalAlignment="Top" Width="401" FontSize="22" BorderBrush="#00ABADB3" Background="#FFE6E6E6">
                         <PasswordBox.Effect>
                             <DropShadowEffect Color="Black" BlurRadius="12" ShadowDepth="8" Opacity="0.3"/>
                         </PasswordBox.Effect>
