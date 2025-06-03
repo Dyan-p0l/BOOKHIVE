@@ -47,21 +47,45 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM Users WHERE Username = @username AND Password = @password";
+
+                    string query = "SELECT UserType FROM Users WHERE Username = @username AND Password = @password";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
 
-                        int result = (int)cmd.ExecuteScalar();
-                        if (result > 0)
+                        object userTypeObj = cmd.ExecuteScalar();
+
+                        if (userTypeObj != null)
                         {
-                            MessageBox.Show("Login successful!");
-                            // Navigate to main window or dashboard
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid login.");
+                            string? userType = userTypeObj?.ToString();
+
+                            if (!string.IsNullOrEmpty(userType))
+                            {
+                                if (userType == "Admin")
+                                {
+                                    MessageBox.Show("Welcome Admin!");
+                                    AdminDashboard adminDashboard = new AdminDashboard();
+                                    adminDashboard.Show();
+                                    this.Close();
+                                }
+                                else if (userType == "User")
+                                {
+                                    MessageBox.Show("Welcome " + username + "!");
+                                    UserDashboard userDashboard = new UserDashboard();
+                                    userDashboard.Show();
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Unrecognized user type.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid username or password.");
+                            }
+
                         }
                     }
                 }
@@ -71,5 +95,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
             }
         }
+
     }
 }
