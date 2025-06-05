@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 using MahApps.Metro.IconPacks;
 
 
-
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     /// <summary>
@@ -29,7 +28,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             MainContentFrame.Navigate(new UsersUI.UserHomepage()); 
             SetActiveButton(HomeButton); 
         }
-
+        
         private void SetActiveButton(Button activeButton)
         {
             var buttons = new List<Button> { HomeButton, AccountButton, BooksButton, HistoryButton, LogoutButton };
@@ -74,11 +73,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     {
                         yield return t;
                     }
-
-                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    if (child != null)
                     {
-                        yield return childOfChild;
+                        foreach (T childOfChild in FindVisualChildren<T>(child))
+                        {
+                            yield return childOfChild;
+                        }
                     }
+                    
                 }
             }
         }

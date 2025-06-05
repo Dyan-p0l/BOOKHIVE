@@ -7,10 +7,18 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="LIBRARY_MANAGEMENT_SYSTEM.UsersUI.UserHomepage"
         mc:Ignorable="d"
         Title="UserHomepage" Height="612" Width="874">
-    <Grid>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="437*"/>
+            <RowDefinition Height="175*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="188*"/>
+            <ColumnDefinition Width="249*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid HorizontalAlignment="Left" Height="95" Margin="0,10,0,0" VerticalAlignment="Top" Width="863">
-            <TextBox Padding="10"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="171,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
+        <Grid Background="White" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="863" Grid.ColumnSpan="2">
+            <TextBox Padding="10"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="115,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>
@@ -18,30 +26,96 @@
             <Grid HorizontalAlignment="Left" Height="75" Margin="756,0,0,0" VerticalAlignment="Center" Width="79">
                 <iconPacks:PackIconFontAwesome 
                     Kind="BellSolid" 
-                    Width="50" 
-                    Height="50" 
+                    Width="40" 
+                    Height="40" 
                     Foreground="Black"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"/>
 
                 <!-- Badge Count -->
                 <Border Background="Red"
-                    Width="30"
-                    Height="30"
+                    Width="25"
+                    Height="25"
                     CornerRadius="10"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
-                    Margin="0">
+                    Margin="0,10,14,0">
                     <TextBlock Text="99"
                         Foreground="White"
-                        FontSize="18"
+                        FontSize="16"
                         FontWeight="Bold"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"/>
                 </Border>
 
             </Grid>
+            <Button Height="52" HorizontalAlignment="Left" Margin="622,18,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#00707070" Background="#FF1A1A1A">
+                <iconPacks:PackIconFontAwesome 
+                Kind="MagnifyingGlassSolid" 
+                Width="30" 
+                Height="30" 
+                Foreground="#FFD32C"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+            </Button>
         </Grid>
-
+        <Grid HorizontalAlignment="Left" Height="506" Margin="0,96,0,0" VerticalAlignment="Top" Width="874" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,14,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/cover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Harry Potter" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="J.K. Rowling" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="255,14,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/aotcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="144"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Attack On Titan" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Hajime Isayama" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,14,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/aotcover2.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Attack on Titan 2" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Hajime Isayama" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF111111" HorizontalAlignment="Left" Height="229" Margin="678,14,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/potter2.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Harry Potter" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="J.K. Rowling" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,267,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/javacover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Java Programming" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Surbhi Kakar" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229"  Margin="255,267,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/cppcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="C++ Programming" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Xavier S. Martin" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,267,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/csharpcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <TextBlock Text="Advanced C#" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Vaskaran Sarcar" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="678,267,0,0" VerticalAlignment="Top" Width="148">
+                <Image Source="/resources/covers/controlSystems.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
+                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,10">
+                    <TextBlock Text="Control Systems " Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Text="Norman Nise" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

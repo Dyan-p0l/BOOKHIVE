@@ -12,18 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
+namespace LIBRARY_MANAGEMENT_SYSTEM
 {
-
-    public partial class UserHomepage : Page
+    /// <summary>
+    /// Interaction logic for Window1.xaml
+    /// </summary>
+    public partial class Window1 : Window
     {
-        public UserHomepage()
+        public Window1()
         {
             InitializeComponent();
         }
-
-       
-
-       
     }
 }

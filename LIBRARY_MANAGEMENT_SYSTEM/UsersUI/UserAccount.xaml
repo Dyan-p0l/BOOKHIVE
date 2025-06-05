@@ -7,8 +7,47 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="UserAccount" Height="612" Width="874">
-    <Grid>
-        <Grid Background="OrangeRed" HorizontalAlignment="Center" Height="596" VerticalAlignment="Center" Width="878"/>
+    <Grid Background="White">
+        <Grid 
+              HorizontalAlignment="Left" Height="154" Margin="228,25,0,0" VerticalAlignment="Top" Width="550">
+            <Grid HorizontalAlignment="Left" Height="154" VerticalAlignment="Top" Width="154" Margin="14,-2,0,0">
+                <Image Source="/resources/avatars/avatar-male3.png" HorizontalAlignment="Left" Height="136" Margin="10,7,0,0" VerticalAlignment="Top" Width="131"/>
 
+            </Grid>
+            <StackPanel HorizontalAlignment="Left" Height="134" Margin="180,20,0,0" VerticalAlignment="Top" Width="353">
+                <TextBlock TextWrapping="Wrap" Text="GABRIEL PHOENIX SEROJIHOS" Height="85" FontSize="26" FontWeight="Bold" FontFamily="Segoe UI Black" Width="343"/>
+                <TextBlock TextWrapping="Wrap" Height="32" FontSize="18" Margin="0,5,0,0" Text="UID: 42069911" FontWeight="semiBold"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid HorizontalAlignment="Center" Height="296" Margin="0,242,0,0" VerticalAlignment="Top" Width="874">
+            <TextBox Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="119,39,0,0" TextWrapping="Wrap" Text="gabBiot" VerticalAlignment="Top" Width="291" Height="49" BorderBrush="#00ABADB3" Background="#FFE2E2E2" FontSize="18">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="461,39,0,0" TextWrapping="Wrap" Text="Gabriel Phoenix D. Serohijos" VerticalAlignment="Top" Width="291" Height="49" BorderBrush="#00ABADB3" Background="#FFE2E2E2" FontSize="18">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+            <PasswordBox Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="119,143,0,0" VerticalAlignment="Top" Width="291" Height="49" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontSize="18">
+                <PasswordBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </PasswordBox.Effect>
+            </PasswordBox>
+            <PasswordBox Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="461,143,0,0" VerticalAlignment="Top" Width="291" Height="49" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontSize="18">
+                <PasswordBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </PasswordBox.Effect>
+            </PasswordBox>
+            <Button Content="Save Changes" HorizontalAlignment="Left" Height="60" Margin="255,226,0,0" VerticalAlignment="Top" Width="159" BorderBrush="#00707070" Background="#FF0C0C0C" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FFFFD32C"/>
+            <Button Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="460,226,0,0" VerticalAlignment="Top" Width="158" BorderBrush="#00707070" Background="#FFFFD32C" Foreground="#FF0C0C0C" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+            <Label Content="Username" HorizontalAlignment="Left" Margin="115,8,0,0" VerticalAlignment="Top" Width="99" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+            <Label Content="Full name" HorizontalAlignment="Left" Margin="457,11,0,0" VerticalAlignment="Top" Width="99" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="115,109,0,0" VerticalAlignment="Top" Width="99" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+            <Label Content="Confirm New Password" HorizontalAlignment="Left" Margin="457,112,0,0" VerticalAlignment="Top" Width="199" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+        </Grid>
+        <Label Content="Update Account Information" HorizontalAlignment="Left" Margin="238,193,0,0" VerticalAlignment="Top" Height="49" Width="418" FontSize="26" FontWeight="Bold"/>
     </Grid>
 </Page>
