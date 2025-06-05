@@ -18,5 +18,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             new PieSeries<double> { Values = new double[] { 25 }, Name = "Journals", InnerRadius = 40 }
             };
         }
+
     }
 }
