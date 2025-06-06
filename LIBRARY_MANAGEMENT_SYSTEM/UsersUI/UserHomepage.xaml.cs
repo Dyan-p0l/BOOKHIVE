@@ -49,7 +49,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 
         private void showAot2(object sender, MouseButtonEventArgs e)
         {
-
+            _parentFrame.Navigate(new homeBooks.Aot2(_parentFrame));
         }
 
         private void showPotter2(object sender, MouseButtonEventArgs e)
