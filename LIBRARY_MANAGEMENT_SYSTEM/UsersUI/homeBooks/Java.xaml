@@ -4,11 +4,40 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.UsersUI"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
-      Height="541" Width="878"
+      Height="612" Width="878"
       Title="Java">
 
-    <Grid Background="White">
-        
+    <Grid Background="#1D1D1D">
+        <Grid HorizontalAlignment="Left" Height="291" Margin="13,48,0,0" VerticalAlignment="Top" Width="858">
+            <Grid Background="White" HorizontalAlignment="Left" Height="272" Margin="139,0,0,0" VerticalAlignment="Center" Width="181">
+                <Image Source="/resources/covers/javacover.jpg" HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="195" Margin="0,4,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="202" Margin="306,0,0,0" VerticalAlignment="Center" Width="426">
+                <Label Content="Title : JAVA PROGRAMMING" HorizontalAlignment="Center" VerticalAlignment="Top" Height="37" Width="376" FontSize="22" FontWeight="Bold" Margin="0,-2,0,0" RenderTransformOrigin="0.5,0.5" Foreground="#FFFDFDFD">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.039"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label Content="Author : Surbhi Kakar" HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top" Height="35" Width="203" FontSize="16" FontWeight="Bold" Foreground="#FFFFCE5C"/>
+                <Button Content="Borrow" HorizontalAlignment="Left" Height="47" Margin="39,149,0,0" VerticalAlignment="Top" Width="110" BorderBrush="#00707070" Background="#FFFF5C5C" FontWeight="Bold"/>
+                <Button Content="Add to Collection" HorizontalAlignment="Left" Height="47" Margin="162,149,0,0" VerticalAlignment="Top" Width="115" BorderBrush="#00707070" Background="#FFFFCE5C" FontWeight="Bold"/>
+                <Label Content="Genre: Educational, Technical, Programming, Computer Science" Margin="33,96,9,0" VerticalAlignment="Top" Height="31" FontWeight="Bold" Foreground="#FFFAF7F0"/>
+            </Grid>
+            <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="20,28,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#00000000">
+                <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="46" Foreground="#FFF7F7F7" HorizontalAlignment="Center"/>
+            </Button>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="240" Margin="88,322,0,0" VerticalAlignment="Top" Width="727">
+            <Label Content="DESCRIPTION:" HorizontalAlignment="Left" Height="30" Margin="16,33,0,0" VerticalAlignment="Top" Width="129" Foreground="#FFFDFDFD" FontSize="16" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Height="139" Margin="20,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="697" Foreground="#FFFFCE5C" FontSize="16" FontWeight="Bold" TextAlignment="Justify" Text="Java Programming by Surbhi Kakar is a comprehensive guide designed for students and beginners in computer science. It introduces the fundamentals of Java, including syntax, object-oriented programming concepts, control structures, data types, and exception handling. The book emphasizes practical learning with clear explanations, real-world examples, and coding exercises. It is ideal for building a strong foundation in Java and preparing for software development or academic exams."/>
+        </Grid>
+
     </Grid>
 </Page>

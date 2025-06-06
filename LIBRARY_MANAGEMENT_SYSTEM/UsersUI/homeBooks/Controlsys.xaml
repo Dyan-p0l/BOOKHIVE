@@ -6,16 +6,16 @@
       xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.UsersUI.homeBooks"
       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
-      Height="541" Width="878"
+      Height="612" Width="878"
       Title="Controlsys">
 
-    <Grid Background="White">
-        <Grid HorizontalAlignment="Left" Height="260" Margin="12,18,0,0" VerticalAlignment="Top" Width="858">
-            <Grid Background="Black" HorizontalAlignment="Left" Height="260" Margin="139,0,0,0" VerticalAlignment="Center" Width="181">
-                <Image Source="/resources/covers/controlSystems.jpg" HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="195" Margin="0,-2,0,0"/>
+    <Grid Background="#1D1D1D">
+        <Grid HorizontalAlignment="Left" Height="291" Margin="13,48,0,0" VerticalAlignment="Top" Width="858">
+            <Grid Background="White" HorizontalAlignment="Left" Height="272" Margin="139,0,0,0" VerticalAlignment="Center" Width="181">
+                <Image Source="/resources/covers/controlSystems.jpg" HorizontalAlignment="Left" Height="260" VerticalAlignment="Center" Width="198"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="202" Margin="306,0,0,0" VerticalAlignment="Center" Width="426">
-                <Label Content="Title : Control Systems Engineering" HorizontalAlignment="Center" VerticalAlignment="Top" Height="37" Width="376" FontSize="22" FontWeight="Bold" Margin="0,-2,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid HorizontalAlignment="Left" Height="202" Margin="306,0,0,0" VerticalAlignment="Center" Width="466">
+                <Label Content="Title : CONTROL SYSTEMS ENGINEERING" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="446" FontSize="22" FontWeight="Bold" Margin="25,-2,0,0" RenderTransformOrigin="0.5,0.5" Foreground="#FFFDFDFD">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -25,19 +25,28 @@
                         </TransformGroup>
                     </Label.RenderTransform>
                 </Label>
-                <Label Content="Author : Norman S. Nise" HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top" Height="35" Width="203" FontSize="16" FontWeight="Bold" Foreground="#FF333333"/>
+                <Label Content="Author : Norman S. Nise" HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top" Height="35" Width="203" FontSize="16" FontWeight="Bold" Foreground="#FFFFCE5C"/>
                 <Button Content="Borrow" HorizontalAlignment="Left" Height="47" Margin="39,149,0,0" VerticalAlignment="Top" Width="110" BorderBrush="#00707070" Background="#FFFF5C5C" FontWeight="Bold"/>
                 <Button Content="Add to Collection" HorizontalAlignment="Left" Height="47" Margin="162,149,0,0" VerticalAlignment="Top" Width="115" BorderBrush="#00707070" Background="#FFFFCE5C" FontWeight="Bold"/>
-                <Label Content="Sixth Edition" HorizontalAlignment="Left" Margin="31,28,0,0" VerticalAlignment="Top" Height="36" Width="220" FontSize="22" FontWeight="Bold"/>
-                <Label Content="Genre: Engineering, Educational, Technical, Non-fiction, &#xD;&#xA;Systems Theory, Automation, Mathematics" Margin="33,96,9,0" VerticalAlignment="Top" Height="50" FontWeight="Bold" Foreground="#FF333333"/>
+                <Label Content="Genre: Engineering, Educational, Technical, Non-fiction, &#xD;&#xA;Systems Theory, Automation, Mathematics" Margin="33,96,9,0" VerticalAlignment="Top" Height="48" FontWeight="Bold" Foreground="#FFFAF7F0"/>
+                <Label Content="SEVENTH EDITION" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="376" FontSize="22" FontWeight="Bold" Margin="30,26,0,0" RenderTransformOrigin="0.5,0.5" Foreground="#FFFDFDFD">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.039"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
             </Grid>
             <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="20,28,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#00000000">
-                <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="46" Foreground="Black" HorizontalAlignment="Center"/>
+                <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="46" Foreground="#FFF7F7F7" HorizontalAlignment="Center"/>
             </Button>
         </Grid>
-        <Grid Background="Black" HorizontalAlignment="Left" Height="240" Margin="87,292,0,0" VerticalAlignment="Top" Width="727">
-            <Label Content="DESCRIPTION:" HorizontalAlignment="Left" Height="30" Margin="20,25,0,0" VerticalAlignment="Top" Width="129" Foreground="#FFFDFDFD" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Control Systems Engineering studies how to model, analyze, and design feedback &#xD;&#xA;control systems.  It focuses on maintaining desired outputs despite disturbances or &#xD;&#xA;changes in inputs.  Key topics include system stability, time and frequency response, and &#xD;&#xA;controller design.  This field is crucial for automation in industries like robotics, aerospace, &#xD;&#xA;and manufacturing.  Engineers learn to make systems respond predictably and reliably&#xD;&#xA;using control theory principles.&#xD;&#xA;" HorizontalAlignment="Left" Height="136" Margin="20,60,0,0" VerticalAlignment="Top" Width="768" Foreground="#FFFFCE5C" FontSize="16" FontWeight="Bold"/>
+        <Grid HorizontalAlignment="Left" Height="240" Margin="88,322,0,0" VerticalAlignment="Top" Width="727">
+            <Label Content="DESCRIPTION:" HorizontalAlignment="Left" Height="30" Margin="16,33,0,0" VerticalAlignment="Top" Width="129" Foreground="#FFFDFDFD" FontSize="16" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Height="139" Margin="20,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="697" Foreground="#FFFFCE5C" FontSize="16" FontWeight="Bold" TextAlignment="Justify"><Run Text="Control Systems Engineering studies how to model, analyze, and design feedback "/><LineBreak/><Run Text="control systems.  It focuses on maintaining desired outputs despite disturbances or "/><LineBreak/><Run Text="changes in inputs.  Key topics include system stability, time and frequency response, and "/><LineBreak/><Run Text="controller design.  This field is crucial for automation in industries like robotics, aerospace, "/><LineBreak/><Run Text="and manufacturing.  Engineers learn to make systems respond predictably and reliably"/><LineBreak/><Run Text="using control theory principles."/></TextBlock>
         </Grid>
 
     </Grid>

@@ -40,7 +40,6 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"/>
                 </Border>
-
             </Grid>
             <Button Height="52" HorizontalAlignment="Left" Margin="622,18,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#00707070" Background="#FF1A1A1A">
                 <iconPacks:PackIconFontAwesome 

@@ -44,7 +44,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 
         private void showCsharp(object sender, MouseButtonEventArgs e)
         {
-            
+            _parentFrame.Navigate(new Csharp(_parentFrame));
         }
 
         private void showAot2(object sender, MouseButtonEventArgs e)
@@ -54,17 +54,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 
         private void showPotter2(object sender, MouseButtonEventArgs e)
         {
-
+            _parentFrame.Navigate(new homeBooks.Potter2(_parentFrame));
         }
         
         private void showCpp(object sender, MouseButtonEventArgs e)
         {
-
+            _parentFrame.Navigate(new Cpp(_parentFrame));
         }
        
         private void showJava(object sender, MouseButtonEventArgs e)
         {
-
+            _parentFrame.Navigate(new Java(_parentFrame));
         }
 
 

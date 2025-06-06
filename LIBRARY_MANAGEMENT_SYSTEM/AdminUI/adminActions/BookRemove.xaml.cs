@@ -1,5 +1,4 @@
-﻿using LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,23 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
+namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
 {
     /// <summary>
-    /// Interaction logic for BookManage.xaml
+    /// Interaction logic for BookRemove.xaml
     /// </summary>
-    public partial class BookManage : Page
+    public partial class BookRemove : Window
     {
-        public BookManage()
+        public BookRemove()
         {
             InitializeComponent();
         }
-
-        private void showAdd(object sender, RoutedEventArgs e)
-        {
-            BookAdd addBook = new BookAdd();
-            addBook.Show();
-        }
-        
     }
 }

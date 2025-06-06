@@ -1,5 +1,4 @@
-﻿using LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,25 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
+namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.homeBooks
 {
     /// <summary>
-    /// Interaction logic for BookManage.xaml
+    /// Interaction logic for Potter2.xaml
     /// </summary>
-    public partial class BookManage : Page
+    public partial class Potter2 : Page
     {
-        public BookManage()
+
+        Frame _parentFrame;
+        public Potter2(Frame parentFrame)
         {
             InitializeComponent();
+            _parentFrame = parentFrame;
         }
 
-        private void showAdd(object sender, RoutedEventArgs e)
+        private void backBtn(object sender, RoutedEventArgs e)
         {
-            BookAdd addBook = new BookAdd();
-            addBook.Show();
+            _parentFrame.Navigate(new UserHomepage(_parentFrame));
         }
-        
     }
 }

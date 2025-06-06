@@ -10,6 +10,9 @@
     <Compile Update="AdminUI\adminActions\BookAdd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AdminUI\adminActions\BookRemove.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AdminUI\AdminDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +58,9 @@
     <Compile Update="UsersUI\homeBooks\Potter1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UsersUI\homeBooks\Potter2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UsersUI\UserAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminUI\adminActions\BookAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\adminActions\BookRemove.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUI\AdminDashboard.xaml">
@@ -124,6 +133,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\homeBooks\Potter1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Potter2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\UserAccount.xaml">
