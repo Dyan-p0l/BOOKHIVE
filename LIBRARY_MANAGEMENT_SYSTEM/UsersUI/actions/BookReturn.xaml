@@ -57,8 +57,29 @@
                 Foreground="#FFFFD32C"
                 RenderTransformOrigin="1.003,3.584"/>
         </Grid>
-        <Grid Background="#232222" HorizontalAlignment="Left" Height="77" Margin="96,139,0,0" VerticalAlignment="Top" Width="372">
-            <Label Content="RETURN REQUEST" HorizontalAlignment="Left" Margin="73,16,0,0" VerticalAlignment="Top" Height="49" Width="238" FontSize="26" FontWeight="Bold" Foreground="#FFFFCE5C"/>
-        </Grid>
+        <Border 
+            Background="#232222" 
+            BorderBrush="#232222" 
+            BorderThickness="2" 
+            CornerRadius="20"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,144,0,0"
+            Height="72" 
+            Width="348">
+
+            <Grid>
+                <Label 
+                Content="RETURN REQUEST" 
+                HorizontalAlignment="Left" 
+                Margin="70,14,0,0" 
+                VerticalAlignment="Top" 
+                Height="48" 
+                Width="215" 
+                FontSize="22" 
+                FontWeight="Bold" 
+                Foreground="#FFFFCE5C"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
