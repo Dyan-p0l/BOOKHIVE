@@ -10,18 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 {
-
-    public partial class UserHistory : Page
+    /// <summary>
+    /// Interaction logic for Java.xaml
+    /// </summary>
+    public partial class Java : Page
     {
-        public UserHistory()
+        public Java()
         {
             InitializeComponent();
         }
-
-        
     }
 }

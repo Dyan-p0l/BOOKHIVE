@@ -19,6 +19,7 @@ using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using LiveChartsCore.Defaults;
+using LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 {
@@ -27,12 +28,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
     /// </summary>
     public partial class UserBooks : Page
     {
-
         public ISeries[] Series { get; set; }
         public Axis[] XAxes { get; set; }
         public Axis[] YAxes { get; set; }
 
-       
         public UserBooks()
         {
             InitializeComponent();
@@ -96,6 +95,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             DataContext = this;
         }
 
-        
+        private void bookBorrow(object sender, RoutedEventArgs e)
+        {
+            
+            BookBorrow bookBorrowWindow = new BookBorrow();
+            bookBorrowWindow.Show();
+        }
+        private void bookReturn(object sender, RoutedEventArgs e)
+        {
+            BookReturn bookReturnWindow = new BookReturn();
+            bookReturnWindow.Show();
+        }
     }
 }

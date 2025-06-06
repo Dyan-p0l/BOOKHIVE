@@ -67,4 +67,10 @@
     <Resource Include="resources\img-vectors\regLib.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="UsersUI\UserHistory.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

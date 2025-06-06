@@ -7,8 +7,88 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="UserHistory" Height="612" Width="874">
-    <Grid>
-        <Grid Background="Aquamarine"
-              HorizontalAlignment="Center" Margin="0,4,0,7" Width="878"/>
+    <Grid Background="White">
+        <Grid HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="678" Margin="92,0,0,0">
+            <Label Content="HISTORY" HorizontalAlignment="Left" Margin="288,6,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+            <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="33,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="577" Height="38" BorderBrush="#00ABADB3" Background="#FFDFDFDF">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Button HorizontalAlignment="Left" Height="38" Margin="609,48,0,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.299,0.565" BorderBrush="#00707070" Background="#FFFFCE5C">
+                <iconPacks:PackIconFontAwesome 
+                    Kind="MagnifyingGlassSolid" 
+                    Width="24" 
+                    Height="21" 
+                    Foreground="Black"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                <Button.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <Grid HorizontalAlignment="Center" Height="516" Margin="0,101,0,0" VerticalAlignment="Top" Width="798">
+            <Grid Background="#F0EEEE" x:Name="grid" HorizontalAlignment="Center" Height="31" Margin="0,19,0,0" VerticalAlignment="Top" Width="748">
+                <iconPacks:PackIconFontAwesome 
+                    Kind="EnvelopeSolid" 
+                    Width="21" 
+                    Height="21" 
+                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="588" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16"/>
+            </Grid>
+            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,55,0,0" VerticalAlignment="Top" Width="748">
+                <iconPacks:PackIconFontAwesome 
+                    Kind="EnvelopeSolid" 
+                    Width="21" 
+                    Height="21" 
+                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Harry Potter: Or...&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="598" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16"/>
+            </Grid>
+            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,91,0,0" VerticalAlignment="Top" Width="748">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="215*"/>
+                    <ColumnDefinition Width="159*"/>
+                </Grid.ColumnDefinitions>
+                <iconPacks:PackIconFontAwesome 
+                    Kind="EnvelopeSolid" 
+                    Width="21" 
+                    Height="21" 
+                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="588" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,127,0,0" VerticalAlignment="Top" Width="748">
+                <iconPacks:PackIconFontAwesome 
+                    Kind="EnvelopeSolid" 
+                    Width="21" 
+                    Height="21" 
+                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="588" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16"/>
+            </Grid>
+            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,163,0,0" VerticalAlignment="Top" Width="748">
+                <iconPacks:PackIconFontAwesome 
+                    Kind="EnvelopeSolid" 
+                    Width="21" 
+                    Height="21" 
+                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="24" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="589" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.019"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+
+        </Grid>
+
     </Grid>
 </Page>

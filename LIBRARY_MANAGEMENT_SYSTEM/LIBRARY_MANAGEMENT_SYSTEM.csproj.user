@@ -25,6 +25,30 @@
     <Compile Update="Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UsersUI\actions\BookBorrow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\actions\BookReturn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Aot.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Controlsys.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Cpp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Csharp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Java.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\homeBooks\Potter1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UsersUI\UserAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +88,30 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Registration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\actions\BookBorrow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\actions\BookReturn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Aot.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Controlsys.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Cpp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Csharp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Java.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\homeBooks\Potter1.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\UserAccount.xaml">

@@ -1,0 +1,14 @@
+﻿<Page x:Class="LIBRARY_MANAGEMENT_SYSTEM.UsersUI.homeBooks.Controlsys"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.UsersUI.homeBooks"
+      mc:Ignorable="d" 
+      Height="612" Width="874"
+      Title="Controlsys">
+
+    <Grid Background="White">
+        
+    </Grid>
+</Page>

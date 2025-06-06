@@ -12,16 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
+namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions
 {
-
-    public partial class UserHistory : Page
+    /// <summary>
+    /// Interaction logic for BookBorrow.xaml
+    /// </summary>
+    public partial class BookBorrow : Window
     {
-        public UserHistory()
+        public BookBorrow()
         {
             InitializeComponent();
+
         }
 
-        
+        private void backBtn(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -13,7 +13,7 @@
             <lvc:CartesianChart Series="{Binding Series}" XAxes="{Binding XAxes}" YAxes="{Binding YAxes}"/>
         </Grid>
         <Grid  HorizontalAlignment="Left" Height="357" Margin="56,255,0,0" VerticalAlignment="Top" Width="738">
-            <Button HorizontalAlignment="Left" Height="215" VerticalAlignment="Top" Width="239" Margin="10,7,0,0" BorderBrush="#00707070" Background="#FFFF5C5C" >
+            <Button Click="bookBorrow" HorizontalAlignment="Left" Height="215" VerticalAlignment="Top" Width="239" Margin="10,7,0,0" BorderBrush="#00707070" Background="#FFFF5C5C" >
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
                     <iconPacks:PackIconFontAwesome Kind="BookMedicalSolid" Width="114" Height="88" Foreground="Black" Margin="0,0,0,10"/>
                     <TextBlock Text="REQUEST TO" FontSize="14"
@@ -22,7 +22,7 @@
                    HorizontalAlignment="Center" TextAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button HorizontalAlignment="Left" Height="215" VerticalAlignment="Top" Width="253" Margin="257,7,0,0" BorderBrush="#00707070" Background="#FF02C4A1">
+            <Button Click="bookReturn" HorizontalAlignment="Left" Height="215" VerticalAlignment="Top" Width="253" Margin="257,7,0,0" BorderBrush="#00707070" Background="#FF02C4A1">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
                     <iconPacks:PackIconFontAwesome Kind="RecycleSolid" Width="114" Height="88" Foreground="#FFFFFDFD" Margin="0,0,0,10"/>
                     <TextBlock Text="ISSUE A" FontSize="14"

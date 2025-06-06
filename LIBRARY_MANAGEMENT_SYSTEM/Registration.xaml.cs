@@ -28,14 +28,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void Register(object sender, RoutedEventArgs e)
         {
-            // Inputs
+
             string fullname = txtFullname.Text.Trim();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password;
             string confpassword = txtconfPassword.Password;
             string userType = "User";
 
-            // Check if all fields are empty
             if (string.IsNullOrWhiteSpace(fullname) &&
                 string.IsNullOrWhiteSpace(username) &&
                 string.IsNullOrWhiteSpace(password) &&
