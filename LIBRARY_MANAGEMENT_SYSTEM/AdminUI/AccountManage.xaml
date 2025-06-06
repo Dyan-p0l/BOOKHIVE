@@ -1,14 +1,11 @@
-﻿<Window x:Class="LIBRARY_MANAGEMENT_SYSTEM.UserDashboard"
+﻿<Page x:Class="LIBRARY_MANAGEMENT_SYSTEM.AdminUI.AccountManage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM"
+        xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
-
-        Title="UserDashboard" Height="730" Width="1060">
-    <Grid>
-        
-    </Grid>
-</Window>
+        Title="AccountManage" Height="616" Width="878">
+    <Grid Background="Aqua"/>
+</Page>

@@ -1,21 +1,52 @@
+<<<<<<< HEAD
+# Build folders
+bin/
+obj/
+
+# Visual Studio folder and files
+=======
 Build folders,
 bin/
 obj/
 
 Visual Studio folder and files,
+>>>>>>> 28c9166e5e55edf015a005f742faa852a124e6dc
 .vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
+<<<<<<< HEAD
+# Auto-generated files
+=======
 Auto-generated files,
+>>>>>>> 28c9166e5e55edf015a005f742faa852a124e6dc
 *.pdb
 *.exe
 *.dll
 *.cache
 *.log
 
+<<<<<<< HEAD
+# NuGet packages folder (if using packages folder, else can be omitted)
+packages/
+
+# Rider IDE files (if you ever use JetBrains Rider)
+.idea/
+
+# DotCover files
+*.dotCover
+
+# ReSharper files
+_ReSharper*/
+*.DotSettings.user
+
+# Publish output folder (if any)
+publish/
+
+# Others
+=======
 NuGet packages folder (if using packages folder, else can be omitted),
 packages/
 
@@ -33,10 +64,16 @@ Publish output folder (if any),
 publish/
 
 Others,
+>>>>>>> 28c9166e5e55edf015a005f742faa852a124e6dc
 *.db
 *.bak
 *.tmp
 *.log
 
+<<<<<<< HEAD
+# Node modules if your project uses node in any way (unlikely in WPF but just in case)
+node_modules/
+=======
 Node modules if your project uses node in any way (unlikely in WPF but just in case),
 node_modules/
+>>>>>>> 28c9166e5e55edf015a005f742faa852a124e6dc

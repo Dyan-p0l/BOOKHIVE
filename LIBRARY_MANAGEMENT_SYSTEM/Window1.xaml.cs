@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     /// <summary>
-    /// Interaction logic for AdminDashboard.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class AdminDashboard : Window
+    public partial class Window1 : Window
     {
-        public AdminDashboard()
+        public Window1()
         {
             InitializeComponent();
         }
-
-  
     }
 }

@@ -10,6 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\avatars\avatar-fem-color.png" />
+    <None Remove="resources\avatars\avatar-fem-color2.png" />
+    <None Remove="resources\avatars\avatar-fem-color3.png" />
+    <None Remove="resources\avatars\avatar-male1-color.png" />
+    <None Remove="resources\avatars\avatar-male2-color.png" />
+    <None Remove="resources\avatars\avatar-male3.png" />
+    <None Remove="resources\covers\aot2cover.jpg" />
+    <None Remove="resources\covers\aotcover.jpg" />
+    <None Remove="resources\covers\aotcover2.jpg" />
+    <None Remove="resources\covers\controlSystems.jpg" />
+    <None Remove="resources\covers\cover.jpg" />
+    <None Remove="resources\covers\cppcover.jpg" />
+    <None Remove="resources\covers\csharpcover.jpg" />
+    <None Remove="resources\covers\javacover.jpg" />
+    <None Remove="resources\covers\potter2.jpg" />
     <None Remove="resources\img-vectors\login.png" />
     <None Remove="resources\img-vectors\logLib.png" />
     <None Remove="resources\img-vectors\logo-bookhive.ico" />
@@ -21,12 +36,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-beta.500" />
     <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="5.1.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\avatars\avatar-fem-color.png" />
+    <Resource Include="resources\avatars\avatar-fem-color2.png" />
+    <Resource Include="resources\avatars\avatar-fem-color3.png" />
+    <Resource Include="resources\avatars\avatar-male1-color.png" />
+    <Resource Include="resources\avatars\avatar-male2-color.png" />
+    <Resource Include="resources\avatars\avatar-male3.png" />
+    <Resource Include="resources\covers\aot2cover.jpg" />
+    <Resource Include="resources\covers\aotcover.jpg" />
+    <Resource Include="resources\covers\aotcover2.jpg" />
+    <Resource Include="resources\covers\controlSystems.jpg" />
+    <Resource Include="resources\covers\cover.jpg" />
+    <Resource Include="resources\covers\cppcover.jpg" />
+    <Resource Include="resources\covers\csharpcover.jpg" />
+    <Resource Include="resources\covers\javacover.jpg" />
+    <Resource Include="resources\covers\potter2.jpg" />
     <Resource Include="resources\img-vectors\login.png" />
     <Resource Include="resources\img-vectors\logLib.png" />
     <Resource Include="resources\img-vectors\logo-bookhive.ico" />

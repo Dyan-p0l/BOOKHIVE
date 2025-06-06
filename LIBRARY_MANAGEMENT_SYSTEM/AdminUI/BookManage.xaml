@@ -1,0 +1,12 @@
+﻿<Page x:Class="LIBRARY_MANAGEMENT_SYSTEM.AdminUI.BookManage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+
+        mc:Ignorable="d"
+        Title="BookManage" Height="616" Width="878">
+    <Grid Background="Coral"/>
+</Page>

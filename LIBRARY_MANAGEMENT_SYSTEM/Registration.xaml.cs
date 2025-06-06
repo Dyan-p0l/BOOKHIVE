@@ -28,11 +28,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void Register(object sender, RoutedEventArgs e)
         {
+            // Inputs
             string fullname = txtFullname.Text.Trim();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password;
             string confpassword = txtconfPassword.Password;
             string userType = "User";
+
+            // Check if all fields are empty
+            if (string.IsNullOrWhiteSpace(fullname) &&
+                string.IsNullOrWhiteSpace(username) &&
+                string.IsNullOrWhiteSpace(password) &&
+                string.IsNullOrWhiteSpace(confpassword))
+            {
+                MessageBox.Show("All fields are required. Please fill in the form.");
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(fullname) ||
                 string.IsNullOrWhiteSpace(username) ||
@@ -97,6 +108,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                             }
 
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MainWindow login = new MainWindow();
+                            login.Show();
+                            this.Close();
                             MainWindow main = new MainWindow();
                             main.Show();
                             this.Close();

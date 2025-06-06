@@ -7,18 +7,57 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AdminDashboard.xaml.cs">
+    <Compile Update="AdminUI\AdminDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminUI\AccountManage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminUI\AdminHomepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminUI\BookManage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminUI\HistoryManage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserDashboard.xaml.cs">
+    <Compile Update="UsersUI\UserAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\UserBooks.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\UserDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\UserHistory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersUI\UserHomepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AdminDashboard.xaml">
+    <Page Update="AdminUI\AdminDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\AccountManage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\AdminHomepage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\BookManage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\HistoryManage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -27,7 +66,22 @@
     <Page Update="Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserDashboard.xaml">
+    <Page Update="UsersUI\UserAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\UserBooks.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\UserDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\UserHistory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\UserHomepage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
