@@ -13,9 +13,7 @@ using LIBRARY_MANAGEMENT_SYSTEM.backend;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -58,18 +56,18 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                         if (userTypeObj != null)
                         {
-                            string? userType = userTypeObj?.ToString();
+                            string? userType = userTypeObj?.ToString()?.Trim();
 
                             if (!string.IsNullOrEmpty(userType))
                             {
-                                if (userType == "Admin")
+                                if (userType.Equals("admin", StringComparison.OrdinalIgnoreCase))
                                 {
                                     MessageBox.Show("Welcome Admin!");
                                     AdminDashboard adminDashboard = new AdminDashboard();
                                     adminDashboard.Show();
                                     this.Close();
                                 }
-                                else if (userType == "User")
+                                else if (userType.Equals("user", StringComparison.OrdinalIgnoreCase))
                                 {
                                     MessageBox.Show("Welcome " + username + "!");
                                     UserDashboard userDashboard = new UserDashboard();

@@ -7,7 +7,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AdminDashboard" Height="730" Width="1060">
+        Title="Admin Dashboard" Height="730" Width="1060" Icon="/resources/img-vectors/logo-bookhive.ico">
     <Grid>
         <Grid Background="Black" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1060">
             <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239">

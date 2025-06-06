@@ -28,24 +28,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void Register(object sender, RoutedEventArgs e)
         {
-            // Inputs
             string fullname = txtFullname.Text.Trim();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password;
             string confpassword = txtconfPassword.Password;
             string userType = "User";
 
-            // Check if all fields are empty
-            if (string.IsNullOrWhiteSpace(fullname) &&
-                string.IsNullOrWhiteSpace(username) &&
-                string.IsNullOrWhiteSpace(password) &&
-                string.IsNullOrWhiteSpace(confpassword))
-            {
-                MessageBox.Show("All fields are required. Please fill in the form.");
-                return;
-            }
-
-            
             if (string.IsNullOrWhiteSpace(fullname) ||
                 string.IsNullOrWhiteSpace(username) ||
                 string.IsNullOrWhiteSpace(password) ||
@@ -68,7 +56,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 {
                     connection.Open();
 
-                    // Check if username already exists
+                    // Check for existing username
                     string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
                     using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
@@ -81,26 +69,41 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         }
                     }
 
-                    // Insert new user
-                    string insertQuery = "INSERT INTO Users (FullName, Username, Password, UserType) VALUES (@Fullname, @Username, @Password, @UserType)";
+                    // Insert into Users and retrieve inserted UserID
+                    string insertQuery = @"
+                INSERT INTO Users (FullName, Username, Password, UserType)
+                VALUES (@Fullname, @Username, @Password, @UserType);
+                SELECT SCOPE_IDENTITY();";
+
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
                         insertCmd.Parameters.AddWithValue("@Fullname", fullname);
                         insertCmd.Parameters.AddWithValue("@Username", username);
-                        insertCmd.Parameters.AddWithValue("@Password", password); // For production, hash passwords!
+                        insertCmd.Parameters.AddWithValue("@Password", password); // Consider hashing in production!
                         insertCmd.Parameters.AddWithValue("@UserType", userType);
-                        int result = insertCmd.ExecuteNonQuery();
 
-                        if (result > 0)
+                        // Execute and get the new UserID
+                        object result = insertCmd.ExecuteScalar();
+                        if (result != null && int.TryParse(result.ToString(), out int newUserId))
                         {
+                            // Insert into AdminManageAccs
+                            string adminInsertQuery = "INSERT INTO AdminManageAccs (UserID, FullName, Username, BorrowedBooks) VALUES (@UserID, @FullName, @Username, 0)";
+                            using (SqlCommand adminCmd = new SqlCommand(adminInsertQuery, connection))
+                            {
+                                adminCmd.Parameters.AddWithValue("@UserID", newUserId);
+                                adminCmd.Parameters.AddWithValue("@FullName", fullname);
+                                adminCmd.Parameters.AddWithValue("@Username", username);
+                                adminCmd.ExecuteNonQuery();
+                            }
+
                             MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                             MainWindow main = new MainWindow();
                             main.Show();
-                            this.Close(); // or redirect to login screen
+                            this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Registration failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show("Registration failed. Could not retrieve user ID.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                     }
                 }
@@ -110,6 +113,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 MessageBox.Show($"An error occurred:\n{ex.Message}", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
 
 
     }
