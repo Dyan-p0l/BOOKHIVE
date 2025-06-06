@@ -25,7 +25,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         public UserDashboard()
         {
             InitializeComponent();
-            MainContentFrame.Navigate(new UsersUI.UserHomepage()); 
+            MainContentFrame.Navigate(new UsersUI.UserHomepage(MainContentFrame)); 
             SetActiveButton(HomeButton); 
         }
         
@@ -105,7 +105,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void homeClick(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new UsersUI.UserHomepage());
+            MainContentFrame.Navigate(new UsersUI.UserHomepage(MainContentFrame));
             SetActiveButton(HomeButton);
         }
 

@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
+namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
 {
     /// <summary>
-    /// Interaction logic for Java.xaml
+    /// Interaction logic for BookAdd.xaml
     /// </summary>
-    public partial class Java : Page
+    public partial class BookAdd : Window
     {
-        Frame _parentFrame;
-        public Java(Frame parentFrame)
+        public BookAdd()
         {
             InitializeComponent();
-            _parentFrame = parentFrame;
         }
     }
 }

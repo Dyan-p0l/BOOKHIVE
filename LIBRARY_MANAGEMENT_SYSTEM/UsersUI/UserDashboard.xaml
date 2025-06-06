@@ -105,9 +105,9 @@
         <Frame x:Name="MainContentFrame"
            HorizontalAlignment="Left"
            Height="612"
-           Margin="187,90,0,0"
+           Margin="185,90,0,0"
            VerticalAlignment="Top"
-           Width="874"
+           Width="876"
            NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -53,56 +53,56 @@
             </Button>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="506" Margin="0,96,0,0" VerticalAlignment="Top" Width="874" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,14,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showPotter1" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,14,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/cover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Harry Potter" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="J.K. Rowling" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="255,14,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showAot1" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="255,14,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/aotcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="144"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Attack On Titan" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="Hajime Isayama" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,14,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showAot2" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,14,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/aotcover2.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Attack on Titan 2" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="Hajime Isayama" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF111111" HorizontalAlignment="Left" Height="229" Margin="678,14,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showPotter2" Background="#FF111111" HorizontalAlignment="Left" Height="229" Margin="678,14,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/potter2.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Harry Potter" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="J.K. Rowling" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,267,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showJava" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="45,267,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/javacover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Java Programming" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="Surbhi Kakar" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229"  Margin="255,267,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showCpp" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229"  Margin="255,267,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/cppcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="C++ Programming" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="Xavier S. Martin" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,267,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showCsharp" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="467,267,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/csharpcover.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <TextBlock Text="Advanced C#" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="Vaskaran Sarcar" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <Grid Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="678,267,0,0" VerticalAlignment="Top" Width="148">
+            <Grid MouseLeftButtonUp="showControlsys" Background="#FF0B0B0B" HorizontalAlignment="Left" Height="229" Margin="678,267,0,0" VerticalAlignment="Top" Width="148">
                 <Image Source="/resources/covers/controlSystems.jpg" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="143"/>
                 <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,10">
                     <TextBlock Text="Control Systems " Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>

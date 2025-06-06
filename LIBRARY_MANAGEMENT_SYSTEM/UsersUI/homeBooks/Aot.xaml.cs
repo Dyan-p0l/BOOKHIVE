@@ -20,9 +20,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
     /// </summary>
     public partial class Aot : Page
     {
-        public Aot()
+        Frame _parentFrame;
+        public Aot(Frame parentFrame)
         {
             InitializeComponent();
+            _parentFrame = parentFrame;
+        }
+
+
+        private void backBtn(object sender, RoutedEventArgs e)
+        {
+            _parentFrame.Navigate(new UserHomepage(_parentFrame));
         }
     }
 }

@@ -20,9 +20,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.homeBooks
     /// </summary>
     public partial class Controlsys : Page
     {
-        public Controlsys()
+
+        Frame _parentFrame;
+        public Controlsys(Frame parentFrame)
         {
             InitializeComponent();
+            _parentFrame = parentFrame;
+        }
+
+        private void backBtn(object sender, RoutedEventArgs e)
+        {
+            _parentFrame.Navigate(new UserHomepage(_parentFrame));
         }
     }
 }

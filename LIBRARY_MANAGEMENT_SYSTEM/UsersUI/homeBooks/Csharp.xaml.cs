@@ -20,9 +20,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
     /// </summary>
     public partial class Csharp : Page
     {
-        public Csharp()
+        Frame _parentFrame;
+        public Csharp(Frame parentFrame)
         {
             InitializeComponent();
+            _parentFrame = parentFrame;
         }
+
+
     }
 }

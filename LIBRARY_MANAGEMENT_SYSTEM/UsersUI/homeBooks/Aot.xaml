@@ -1,14 +1,35 @@
-﻿<Page x:Class="LIBRARY_MANAGEMENT_SYSTEM.UsersUI.Aot"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.UsersUI"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="LIBRARY_MANAGEMENT_SYSTEM.UsersUI.Aot"
       mc:Ignorable="d" 
-      Height="612" Width="874"
+      Height="541" Width="878"
       Title="Aot">
 
     <Grid Background="White">
-        
+        <Grid HorizontalAlignment="Left" Height="260" Margin="12,18,0,0" VerticalAlignment="Top" Width="858">
+            <Grid Background="Black" HorizontalAlignment="Left" Height="260" Margin="139,0,0,0" VerticalAlignment="Center" Width="181">
+                <Image Source="/resources/covers/aotcover.jpg" HorizontalAlignment="Left" Height="260" VerticalAlignment="Center" Width="195" Margin="4,0,0,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="202" Margin="306,0,0,0" VerticalAlignment="Center" Width="426">
+                <Label Content="Title : Attack on Titan Volume 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="36" Width="362" FontSize="22" FontWeight="Bold" Margin="0,-2,0,0"/>
+                <Label Content="Author : Hajime Isayama" HorizontalAlignment="Left" Margin="32,59,0,0" VerticalAlignment="Top" Height="35" Width="203" FontSize="16" FontWeight="Bold" Foreground="#FF333333"/>
+                <Button Content="Borrow" HorizontalAlignment="Left" Height="47" Margin="39,149,0,0" VerticalAlignment="Top" Width="110" BorderBrush="#00707070" Background="#FFFF5C5C" FontWeight="Bold"/>
+                <Button Content="Add to Collection" HorizontalAlignment="Left" Height="47" Margin="162,149,0,0" VerticalAlignment="Top" Width="115" BorderBrush="#00707070" Background="#FFFFCE5C" FontWeight="Bold"/>
+                <Label Content="(Shingeki no Kyojin)" HorizontalAlignment="Left" Margin="31,28,0,0" VerticalAlignment="Top" Height="36" Width="220" FontSize="22" FontWeight="Bold"/>
+                <Label Content="Genre: Action, Dark Fantasy, Post-Apocalyptic, Drama, Mystery, &#xD;&#xA;Military, Thriller" Margin="33,96,9,0" VerticalAlignment="Top" Height="50" FontWeight="Bold" Foreground="#FF333333"/>
+            </Grid>
+            <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="20,28,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#00000000">
+                <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="46" Foreground="Black" HorizontalAlignment="Center"/>
+            </Button>
+        </Grid>
+        <Grid Background="Black" HorizontalAlignment="Left" Height="240" Margin="87,292,0,0" VerticalAlignment="Top" Width="727">
+            <Label Content="DESCRIPTION:" HorizontalAlignment="Left" Height="30" Margin="20,25,0,0" VerticalAlignment="Top" Width="129" Foreground="#FFFDFDFD" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Attack on Titan is a thrilling manga series set in a world where humanity lives within &#xA;massive walls to protect themselves from giant humanoid creatures known as Titans. &#xA;The story follows Eren Yeager, a young boy who vows to destroy the Titans after they bring &#xA;destruction to his hometown. With intense battles, deep mysteries, and powerful themes &#xA;of freedom and survival, this series captivates readers from start to finish." HorizontalAlignment="Left" Height="136" Margin="18,63,0,0" VerticalAlignment="Top" Width="699" Foreground="#FFFFCE5C" FontSize="16" FontWeight="Bold"/>
+        </Grid>
+
     </Grid>
 </Page>
