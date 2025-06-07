@@ -41,5 +41,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             books.Show();
         }
 
+        private void showBookLog(object sender, RoutedEventArgs e)
+        {
+            BookLog bookLog = new BookLog();
+            bookLog.Show();
+        }
+
     }
 }
