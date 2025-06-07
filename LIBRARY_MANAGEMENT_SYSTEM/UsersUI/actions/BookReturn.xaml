@@ -44,6 +44,7 @@
             </TextBox>
 
             <Button Content="Submit"
+                Click="Submit_Click"
                 HorizontalAlignment="Left"
                 Height="71"
                 Margin="147,415,0,0"

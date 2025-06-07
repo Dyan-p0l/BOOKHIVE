@@ -22,7 +22,7 @@
         <Grid HorizontalAlignment="Center" Height="504" Margin="0,221,0,0" VerticalAlignment="Top" Width="484">
 
             <Label Content="BOOK TITLE" HorizontalAlignment="Left" Margin="32,30,0,0" VerticalAlignment="Top" Height="50" Width="166" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.776,0.344"/>
-            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtFullname" HorizontalAlignment="Left" Margin="33,65,0,0" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtBookTitle" HorizontalAlignment="Left" Margin="33,65,0,0" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>

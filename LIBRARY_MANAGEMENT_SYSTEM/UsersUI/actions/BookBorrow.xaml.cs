@@ -30,7 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            string title = txtFullname.Text.Trim();
+            string title = txtBookTitle.Text.Trim();
             string bookIdText = txtBookID.Text.Trim();  // From your TextBox
             string author = txtBookAuthor.Text.Trim();
             DateTime now = DateTime.Now.Date;
