@@ -7,7 +7,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="BookReturn" Height="753" Width="552">
+        Title="BookReturn" Height="753" Width="552" Icon="/resources/img-vectors/logo-bookhive.ico">
     <Grid>
         <Grid Background="#232222" HorizontalAlignment="Center" Height="112" VerticalAlignment="Top" Width="574">
 
