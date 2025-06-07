@@ -47,10 +47,10 @@
             <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239">
                 <Image Source="/resources/img-vectors/logoLib.png" HorizontalAlignment="Left" Height="63" Margin="28,5,0,0" VerticalAlignment="Top" Width="206" RenderTransformOrigin="0.505,1.025"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="46" Margin="762,0,0,0" VerticalAlignment="Center" Width="270">
+            <Grid HorizontalAlignment="Left" Height="46" Margin="700,0,0,0" VerticalAlignment="Center" Width="350">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="40" Height="40" Margin="0,0,15,0" VerticalAlignment="Center" Foreground="Black"/>
-                    <TextBlock Text="Welcome User" FontSize="24" FontWeight="Black" VerticalAlignment="Center" Foreground="Black" />
+                    <TextBlock x:Name="lblWelcome" FontSize="24" FontWeight="Black" VerticalAlignment="Center" Foreground="Black" />
                 </StackPanel>
             </Grid>
         </Grid>

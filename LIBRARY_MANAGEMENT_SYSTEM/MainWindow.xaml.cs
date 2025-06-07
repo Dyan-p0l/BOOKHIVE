@@ -72,6 +72,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                                 else if (userType == "User")
                                 {
                                     MessageBox.Show("Welcome " + username + "!");
+                                    dataStore.CurrentUsername = username; // Save current username
                                     UserDashboard userDashboard = new UserDashboard();
                                     userDashboard.Show();
                                     this.Close();

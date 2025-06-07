@@ -78,7 +78,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         }
                     }
 
+<<<<<<< HEAD
                     string insertQuery = "INSERT INTO Books (Title, BookID, Author, Genre) VALUES (@Title, @IDNum, @Author, @Genre)";
+=======
+                    string insertQuery = "INSERT INTO Books (Title, BookID, Author, genre) VALUES (@Title, @IDNum, @Author, @Genre)";
+>>>>>>> 73eccd690b166c17be51c0de25c2151b239f76c6
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
                         insertCmd.Parameters.AddWithValue("@Title", title);
