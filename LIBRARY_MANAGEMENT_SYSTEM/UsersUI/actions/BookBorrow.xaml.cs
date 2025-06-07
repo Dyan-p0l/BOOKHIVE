@@ -25,7 +25,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions
         public BookBorrow()
         {
             InitializeComponent();
-
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
