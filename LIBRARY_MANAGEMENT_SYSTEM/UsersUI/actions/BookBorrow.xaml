@@ -30,7 +30,7 @@
 
 
             <Label Content="BOOK ID" HorizontalAlignment="Left" Margin="34,156,0,0" VerticalAlignment="Top" Height="49" Width="164" FontSize="20" FontWeight="Bold"/>
-            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtFullname_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True" Margin="33,198,0,0">
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtBookID" HorizontalAlignment="Left" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True" Margin="33,198,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>
@@ -38,7 +38,7 @@
 
 
             <Label Content="BOOK AUTHOR" Margin="32,274,285,0" VerticalAlignment="Top" Height="48" FontSize="20" FontWeight="Bold"/>
-            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtFullname_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True" Margin="33,315,0,0">
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtBookAuthor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True" Margin="33,315,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>
@@ -46,6 +46,7 @@
 
 
             <Button Content="Submit"
+                    Click="Submit_Click"
                     HorizontalAlignment="Left"
                     Height="71"
                     Margin="147,415,0,0"

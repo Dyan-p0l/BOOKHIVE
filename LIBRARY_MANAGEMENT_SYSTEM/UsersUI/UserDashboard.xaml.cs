@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LIBRARY_MANAGEMENT_SYSTEM.backend;
 using MahApps.Metro.IconPacks;
 
 
@@ -25,6 +26,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         public UserDashboard()
         {
             InitializeComponent();
+            string username = dataStore.CurrentUsername;
+            lblWelcome.Text = $"Welcome, {username}!"; // Example usage
             MainContentFrame.Navigate(new UsersUI.UserHomepage(MainContentFrame)); 
             SetActiveButton(HomeButton); 
         }

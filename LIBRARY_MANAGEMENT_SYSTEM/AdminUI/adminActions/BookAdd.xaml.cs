@@ -68,7 +68,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                     while (idExists)
                     {
                         idNumber = random.Next(10000, 100000); 
-                        string checkQuery = "SELECT COUNT(*) FROM Books WHERE IDNumber = @ID";
+                        string checkQuery = "SELECT COUNT(*) FROM Books WHERE BookID = @ID";
                         using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                         {
                             checkCmd.Parameters.AddWithValue("@ID", idNumber);
@@ -77,7 +77,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         }
                     }
 
-                    string insertQuery = "INSERT INTO Books (Title, IDNumber, Author, genre) VALUES (@Title, @IDNum, @Author, @Genre)";
+                    string insertQuery = "INSERT INTO Books (Title, BookID, Author, genre) VALUES (@Title, @IDNum, @Author, @Genre)";
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
                         insertCmd.Parameters.AddWithValue("@Title", title);

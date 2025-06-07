@@ -58,7 +58,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                 {
                     connection.Open();
 
-                    string checkQuery = "SELECT COUNT(*) FROM Books WHERE IDNumber = @IDNum";
+                    string checkQuery = "SELECT COUNT(*) FROM Books WHERE BookID = @IDNum";
                     using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
                         checkCmd.Parameters.AddWithValue("@IDNum", id);
@@ -71,7 +71,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         }
                     }
 
-                    string deleteQuery = "DELETE FROM Books WHERE IDNumber = @IDNum";
+                    string deleteQuery = "DELETE FROM Books WHERE BookID = @IDNum";
                     using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, connection))
                     {
                         deleteCmd.Parameters.AddWithValue("@IDNum", id);
