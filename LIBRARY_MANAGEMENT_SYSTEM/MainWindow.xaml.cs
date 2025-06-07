@@ -64,18 +64,28 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                             {
                                 if (userType == "Admin")
                                 {
-                                    MessageBox.Show("Welcome Admin!");
                                     AdminDashboard adminDashboard = new AdminDashboard();
                                     adminDashboard.Show();
                                     this.Close();
+                                    MessageBox.Show(
+                                            $"Welcome, Admin! 🎉",         // Message
+                                            "Login Successful",                 // Header/Title
+                                            MessageBoxButton.OK,                // Button
+                                            MessageBoxImage.Information         // Icon
+                                        );
                                 }
                                 else if (userType == "User")
                                 {
-                                    MessageBox.Show("Welcome " + username + "!");
-                                    dataStore.CurrentUsername = username; // Save current username
+                                    dataStore.CurrentUsername = username; 
                                     UserDashboard userDashboard = new UserDashboard();
                                     userDashboard.Show();
                                     this.Close();
+                                    MessageBox.Show(
+                                            $"Welcome, {username}! 🎉",         
+                                            "Login Successful",                 
+                                            MessageBoxButton.OK,                
+                                            MessageBoxImage.Information         
+                                    );
                                 }
                                 else
                                 {

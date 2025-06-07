@@ -10,6 +10,9 @@
     <Compile Update="AdminUI\adminActions\BookAdd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AdminUI\adminActions\BookLog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AdminUI\adminActions\BookRemove.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminUI\adminActions\BookAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminUI\adminActions\BookLog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUI\adminActions\BookRemove.xaml">

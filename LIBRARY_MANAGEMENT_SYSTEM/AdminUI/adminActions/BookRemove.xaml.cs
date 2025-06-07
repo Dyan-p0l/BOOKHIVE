@@ -58,7 +58,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                 using (SqlConnection connection = db.GetConnection())
                 {
                     connection.Open();
-
+                        
                     string checkQuery = "SELECT COUNT(*) FROM Books WHERE BookID = @IDNum";
                     using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
