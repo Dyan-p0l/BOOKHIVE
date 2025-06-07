@@ -68,6 +68,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="AdminUI\adminActions\BookAdd.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
     <Page Update="UsersUI\UserHistory.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

@@ -11,7 +11,7 @@
     <Grid Background="White">
         <Button Content="VIEW BOOKS LISTS" HorizontalAlignment="Left" Height="113" Margin="504,132,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
         <Button Click="showAdd" Content="ADD A BOOK" HorizontalAlignment="Left" Height="113" Margin="130,132,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
-        <Button Content="REMOVE BOOKS" HorizontalAlignment="Left" Height="113" Margin="130,308,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
+        <Button Click="showRemove" Content="REMOVE BOOKS" HorizontalAlignment="Left" Height="113" Margin="130,308,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
         <Button Content="VIEW BOOK LOGS" HorizontalAlignment="Left" Height="113" Margin="504,308,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
 
     </Grid>

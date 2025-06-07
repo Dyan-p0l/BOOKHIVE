@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LIBRARY_MANAGEMENT_SYSTEM.backend;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,77 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
         public BookRemove()
         {
             InitializeComponent();
+        }
+
+        private void backBtn(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void deleteBook(object sender, EventArgs e)
+        {
+            string title = txtTitle.Text.Trim();
+            string author = txtAuthor.Text.Trim();
+            string id = txtId.Text.Trim();
+
+
+            if (string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(author) && string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("All fields are required. Please fill in the form.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(author) || string.IsNullOrWhiteSpace(id))
+            {
+                MessageBox.Show("Please complete all fields.");
+                return;
+            }
+
+            try
+            {
+                dbConnection db = new dbConnection();
+
+                using (SqlConnection connection = db.GetConnection())
+                {
+                    connection.Open();
+
+                    string checkQuery = "SELECT COUNT(*) FROM Books WHERE IDNumber = @IDNum";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                    {
+                        checkCmd.Parameters.AddWithValue("@IDNum", id);
+                        int bookExists = (int)checkCmd.ExecuteScalar();
+
+                        if (bookExists == 0)
+                        {
+                            MessageBox.Show("No book found with that ID.", "Delete Failed", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            return;
+                        }
+                    }
+
+                    string deleteQuery = "DELETE FROM Books WHERE IDNumber = @IDNum";
+                    using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, connection))
+                    {
+                        deleteCmd.Parameters.AddWithValue("@IDNum", id);
+                        int result = deleteCmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Book removed successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                            txtId.Clear();
+                            txtAuthor.Clear();
+                            txtTitle.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete the book. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred:\n{ex.Message}", "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

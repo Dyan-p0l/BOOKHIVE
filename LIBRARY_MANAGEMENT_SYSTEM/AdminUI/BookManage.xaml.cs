@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 {
-    /// <summary>
-    /// Interaction logic for BookManage.xaml
-    /// </summary>
+
     public partial class BookManage : Page
     {
         public BookManage()
@@ -30,6 +28,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             BookAdd addBook = new BookAdd();
             addBook.Show();
         }
-        
+
+        private void showRemove(object sender, RoutedEventArgs e)
+        {
+            BookRemove removeBook = new BookRemove();
+            removeBook.Show();
+        }
+
     }
 }

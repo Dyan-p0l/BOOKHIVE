@@ -4,9 +4,81 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="BookRemove" Height="450" Width="800">
-    <Grid>
-        
+        Title="BookRemove" Height="753" Width="552">
+    <Grid Background="#FFFFD32C">
+
+        <Grid Background="#232222" HorizontalAlignment="Center" Height="112" VerticalAlignment="Top" Width="574">
+
+            <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239"/>
+            <Image Source="/resources/img-vectors/logoYel.png" HorizontalAlignment="Center" Height="92" VerticalAlignment="Center" Width="265" RenderTransformOrigin="0.505,1.025"/>
+            <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="20,0,0,0" VerticalAlignment="Center" Width="62" BorderBrush="#00707070" Background="#004994FF">
+                <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="42" Foreground="#FFFFFDFD"/>
+            </Button>
+        </Grid>
+
+        <Grid HorizontalAlignment="Center" Height="504" Margin="0,221,0,0" VerticalAlignment="Top" Width="484">
+
+            <Label Content="BOOK ID" HorizontalAlignment="Left" Margin="32,16,0,0" VerticalAlignment="Top" Height="50" Width="166" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.776,0.344"/>
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtId" HorizontalAlignment="Left" Margin="33,51,0,0" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+
+
+            <Label Content="BOOK AUTHOR" Margin="33,268,284,0" VerticalAlignment="Top" Height="48" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.598,1.876"/>
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtAuthor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True" Margin="34,309,0,0">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+
+            <Button Click="deleteBook" Content="DELETE BOOK"
+            HorizontalAlignment="Left"
+            Height="71"
+            Margin="147,415,0,0"
+            VerticalAlignment="Top"
+            Width="194"
+            BorderBrush="#00707070"
+            Background="#FF0C0C0C"
+            FontSize="20"
+            FontWeight="Bold"
+            FontFamily="Segoe UI Black"
+            Foreground="#FFFFD32C"
+            RenderTransformOrigin="1.003,3.584"/>
+            <Label Content="BOOK TITLE" HorizontalAlignment="Left" Margin="33,152,0,0" VerticalAlignment="Top" Height="50" Width="166" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.776,0.344"/>
+            <TextBox Padding="10" VerticalContentAlignment="Center" x:Name="txtTitle" HorizontalAlignment="Left" Margin="34,187,0,0" VerticalAlignment="Top" Width="422" Height="65" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#00ABADB3" Background="#FFE6E6E6" TextWrapping="Wrap" AcceptsReturn="True">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
+        </Grid>
+        <Border 
+            Background="#232222" 
+            BorderBrush="#232222" 
+            BorderThickness="2" 
+            CornerRadius="20"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,144,0,0"
+            Height="72" 
+            Width="348">
+
+            <Grid>
+                <Label 
+    Content="ENTER BOOK INFORMATION" 
+    HorizontalAlignment="Left" 
+    VerticalAlignment="Top" 
+    Height="48" 
+    Width="324" 
+    FontSize="22" 
+    FontWeight="Bold" 
+    Foreground="#FFFFCE5C" Margin="20,12,0,0"/>
+            </Grid>
+        </Border>
+
     </Grid>
 </Window>
