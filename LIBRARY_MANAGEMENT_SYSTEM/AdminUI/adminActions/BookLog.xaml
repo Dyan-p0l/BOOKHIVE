@@ -5,7 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="BookLog" Height="730" Width="1060">
-    
+    <Grid>
+        <Grid Background="Black" HorizontalAlignment="Center" Height="76" VerticalAlignment="Top" Width="1060"/>
+        <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="10,10,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#004994FF">
+            <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="42" Foreground="#FFFDFDFD"/>
+        </Button>
+        <Label Content="BOOK LOGS" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="48" Width="154" FontSize="26" FontWeight="Bold" Foreground="#FFFFCE5C"/>
+        <Grid HorizontalAlignment="Center" Height="497" Margin="0,119,0,0" VerticalAlignment="Top" Width="961">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding BookLogsList}" Height="551">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,10,0,0" Width="820">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <!-- Icon -->
+                                    <ColumnDefinition Width="85"/>
+                                    <!-- Date -->
+                                    <ColumnDefinition Width="*"/>
+                                    <!-- Action text -->
+                                </Grid.ColumnDefinitions>
+
+                                <iconPacks:PackIconFontAwesome 
+                            Kind="EnvelopeSolid" 
+                            Width="21" 
+                            Height="21" 
+                            Foreground="Black"
+                            VerticalAlignment="Center"
+                            Margin="10,0,0,0"/>
+                    
+                           <TextBlock Grid.Column="1"
+                           Text="{Binding dateAdded}"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,0"
+                           TextWrapping="NoWrap"
+                           FontSize="14"
+                           HorizontalAlignment="Left"/>
+                        
+                           <TextBlock Grid.Column="2"
+                           Text="{Binding Message}"
+                           VerticalAlignment="Center"
+                           FontWeight="Bold"
+                           FontSize="16"
+                           TextTrimming="CharacterEllipsis"
+                           TextWrapping="NoWrap"
+                           Margin="10,0,10,0"
+                           HorizontalAlignment="Left"/>
+
+                                <Button Click="approveClick" Grid.Column="2"
+                                    Width="30"
+                                    Height="30"
+                                    Margin="620,0,45,0"
+                                    VerticalAlignment="Center"
+                                    Background="LightGreen"
+                                    Tag="{Binding}">
+                                    <iconPacks:PackIconFontAwesome Kind="CheckSolid" Foreground="White"/>
+                                </Button>
+
+                                <Button Click="declineClick" Grid.Column="2"
+                                    Width="30"
+                                    Height="30"
+                                    Margin="655,0,10,0"
+                                    VerticalAlignment="Center"
+                                    Background="Tomato"
+                                    Tag="{Binding}">
+                                    <iconPacks:PackIconFontAwesome Kind="XmarkSolid" Foreground="White"/>
+                                </Button>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
 </Window>
