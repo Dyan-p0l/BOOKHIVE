@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         Title="UserHomepage" Height="612" Width="874">
     <Grid Background="White">
-        
 
         <Grid Background="White" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="863" Grid.ColumnSpan="2">
             <TextBox Padding="10"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="115,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
@@ -25,7 +24,6 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"/>
 
-                <!-- Badge Count -->
                 <Border Background="Red"
                     Width="25"
                     Height="25"

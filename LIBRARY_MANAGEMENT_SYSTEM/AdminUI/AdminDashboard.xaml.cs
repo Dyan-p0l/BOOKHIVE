@@ -122,6 +122,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 login.Show();
                 this.Close();
             }
-        }       
+        }
+
+        private void AdminContentFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
     }
 }

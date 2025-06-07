@@ -7,7 +7,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AdminDashboard" Height="730" Width="1060">
+        Title="AdminDashboard" Height="730" Width="1260">
 
     <Window.Resources>
         <Style x:Key="CustomButtonStyle" TargetType="Button">
@@ -45,16 +45,17 @@
 
 
     <Grid>
-        <Grid Background="Black" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1060">
+        <Grid Background="Black" HorizontalAlignment="Center" Height="97" VerticalAlignment="Top" Width="1260">
             <Grid HorizontalAlignment="Left" Height="85" Margin="10,7,0,0" VerticalAlignment="Top" Width="239">
                 <Image Source="/resources/img-vectors/logoYel.png" HorizontalAlignment="Left" Height="63" Margin="28,0,0,0" VerticalAlignment="Center" Width="206" RenderTransformOrigin="0.505,1.025"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="46" Margin="762,0,0,0" VerticalAlignment="Center" Width="270">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="40" Height="40" Margin="0,0,15,0" VerticalAlignment="Center" Foreground="#FFFFCE5C"/>
-                    <TextBlock Text="Welcome Admin" FontSize="24" FontWeight="Black" VerticalAlignment="Center" Foreground="#FFFFCE5C" />
-                </StackPanel>
-            </Grid>
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="46" Margin="957,26,0,0" VerticalAlignment="Top" Width="270">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="40" Height="40" Margin="0,0,15,0" VerticalAlignment="Center" Foreground="#FFFFCE5C"/>
+                <TextBlock Text="Welcome Admin" FontSize="24" FontWeight="Black" VerticalAlignment="Center" Foreground="#FFFFCE5C" />
+            </StackPanel>
         </Grid>
         <Grid Background="#383333" HorizontalAlignment="Left" Height="617" Margin="0,97,0,0" VerticalAlignment="Top" Width="182">
             <Grid HorizontalAlignment="Left" Height="91" Margin="0,32,0,0" VerticalAlignment="Top" Width="165">
@@ -112,7 +113,8 @@
            Height="616"
            Margin="187,102,0,0"
            VerticalAlignment="Top"
-           Width="878"
-           NavigationUIVisibility="Hidden"/>
+           Width="1073"
+           NavigationUIVisibility="Hidden" Navigated="AdminContentFrame_Navigated"/>
+        <Grid HorizontalAlignment="Left" Height="612" Margin="187,102,0,0" VerticalAlignment="Top" Width="1073"/>
     </Grid>
 </Window>

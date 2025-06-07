@@ -26,8 +26,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
         {
             InitializeComponent();
         }
-
-
+        
         private void backBtn(object sender, EventArgs e)
         {
             this.Close();
@@ -40,6 +39,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
             int idNumber = 0;
             string title = txtTitle.Text.Trim();
             string author = txtAuthor.Text.Trim();
+            string Action = "";
+            DateTime currentDateTime = DateTime.Now;
 
             var selectedGenres = genreListBox.SelectedItems
                 .Cast<ListBoxItem>()
@@ -68,7 +69,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                     while (idExists)
                     {
                         idNumber = random.Next(10000, 100000); 
-                        string checkQuery = "SELECT COUNT(*) FROM Books WHERE IDNumber = @ID";
+                        string checkQuery = "SELECT COUNT(*) FROM Books WHERE BookID = @ID";
                         using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                         {
                             checkCmd.Parameters.AddWithValue("@ID", idNumber);
@@ -77,7 +78,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         }
                     }
 
-                    string insertQuery = "INSERT INTO Books (Title, IDNumber, Author, genre) VALUES (@Title, @IDNum, @Author, @Genre)";
+                    string insertQuery = "INSERT INTO Books (Title, BookID, Author, Genre) VALUES (@Title, @IDNum, @Author, @Genre)";
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
                     {
                         insertCmd.Parameters.AddWithValue("@Title", title);
@@ -97,6 +98,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         {
                             MessageBox.Show("Book Add failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
+                    }
+
+                    Action = $"Book Added: {title}, with ID:[{idNumber}]";
+
+                    string actionQuery = "INSERT INTO AdminActions (actions, date) VALUES (@Action, @Date)";
+                    using (SqlCommand insertCmd = new SqlCommand(actionQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@Action", Action);
+                        insertCmd.Parameters.AddWithValue("@Date", currentDateTime);
+                        int result = insertCmd.ExecuteNonQuery();
                     }
                 }
             }

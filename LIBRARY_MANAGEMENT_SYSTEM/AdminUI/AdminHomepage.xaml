@@ -4,11 +4,34 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI"
+      xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
       mc:Ignorable="d" 
-      d:DesignHeight="616" d:DesignWidth="878"
+      d:DesignHeight="616" d:DesignWidth="1073"
       Title="AdminHomepage">
 
-    <Grid Background="Khaki">
-        
+    <Grid Background="White">
+        <Grid HorizontalAlignment="Center" Height="219" Margin="0,27,0,0" VerticalAlignment="Top" Width="1052">
+            <Grid HorizontalAlignment="Left" Height="219" Margin="12,0,0,0" VerticalAlignment="Center" Width="472">
+                <lvc:PieChart Series="{Binding Series}"
+                  LegendPosition="Hidden"
+                  Background="Black" Margin="-10,-9,30,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="237" Margin="470,0,0,0" VerticalAlignment="Center" Width="557">
+                <lvc:CartesianChart 
+                    Background="Black"
+                    Series="{Binding ColumnSeries}" 
+                    XAxes="{Binding XAxes}" 
+                    YAxes="{Binding YAxes}" HorizontalAlignment="Center" Margin="0,10,0,0" Width="557" />
+                <Label Content="FICTION" HorizontalAlignment="Left" Height="23" Margin="123,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White"/>
+                <Label Content="SCIENCE" HorizontalAlignment="Left" Height="23" Margin="179,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+                <Label Content="HISTORY" HorizontalAlignment="Left" Height="23" Margin="236,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+                <Label Content="ENGINEERING" HorizontalAlignment="Left" Height="23" Margin="292,184,0,0" VerticalAlignment="Top" Width="83" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+                <Label Content="SCI-FI" HorizontalAlignment="Left" Height="23" Margin="376,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+                <Label Content="PROGRAMMING" HorizontalAlignment="Left" Height="23" Margin="415,184,0,0" VerticalAlignment="Top" Width="99" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+            </Grid>
+        </Grid>
+        <Label Content="BOOKS" HorizontalAlignment="Left" Margin="204,14,0,0" VerticalAlignment="Top" Width="59" Foreground="#FFFDFDFD" FontWeight="Bold" FontSize="14"/>
+        <Label Content="BOOKS EACH GENRE" HorizontalAlignment="Left" Margin="707,2,0,0" VerticalAlignment="Top" Width="162" Foreground="Black" FontWeight="Bold" FontSize="14"/>
+
     </Grid>
 </Page>

@@ -38,7 +38,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 
             var whiteTextPaint = new SolidColorPaint(SKColors.White);
 
-
             Series = new ISeries[]
             {
                 new ColumnSeries<ObservablePoint>

@@ -1,28 +1,99 @@
-﻿using System;
+﻿using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using LiveChartsCore.Measure;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
+using LiveChartsCore.Defaults;
+using LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions;
+using LiveChartsCore.Kernel;
+using LiveChartsCore.Kernel.Sketches;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 {
-    /// <summary>
-    /// Interaction logic for AdminHomepage.xaml
-    /// </summary>
     public partial class AdminHomepage : Page
     {
+        public IEnumerable<ISeries> Series { get; set; }
+        public IEnumerable<ISeries> ColumnSeries { get; set; }
+        public Axis[] XAxes { get; set; }
+        public Axis[] YAxes { get; set; }
+
         public AdminHomepage()
         {
             InitializeComponent();
+
+            // Example values - replace with actual DB queries
+            int totalBooks = 100; // You should get this from the database
+            int borrowedBooks = 40;
+            int availableBooks = totalBooks - borrowedBooks;
+
+            Series = new ISeries[]
+            {
+                new PieSeries<int> { Values = new[] { borrowedBooks }, Name = "Books with borrowed copies"},
+                new PieSeries<int> { Values = new[] { availableBooks }, Name = "Books without borrowed copies"}
+            };
+
+            var bookCounts = new List<ObservableValue>
+            {
+                new ObservableValue(120),
+                new ObservableValue(95),
+                new ObservableValue(30),
+                new ObservableValue(12),
+                new ObservableValue(15),
+                new ObservableValue(18)
+            };
+
+            string[] genres = new[]{"Fiction", "Science", "History", "Engineering", "Sci-Fi", "Computer Programming"};
+
+            SKColor[] colors = new[]
+            {
+                SKColor.Parse("#FF5C5C"),
+                SKColor.Parse("#02C4A1"),
+                SKColor.Parse("#FFD32C"),
+                SKColor.Parse("#6A5ACD"),
+                SKColor.Parse("#FFA500"),
+                SKColor.Parse("#40E0D0")
+            };
+
+            var whiteTextPaint = new SolidColorPaint(SKColors.White);
+
+            ColumnSeries = genres.Select((genre, index) => new ColumnSeries<ObservableValue>
+            {
+                Values = new[] { bookCounts[index] },
+                Name = genre,
+                Fill = new SolidColorPaint(colors[index]),
+                MaxBarWidth = 60,
+                DataLabelsPaint = whiteTextPaint,
+                DataLabelsSize = 11,
+                DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top
+            }).ToArray();
+
+
+            XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "Genres",
+                    TextSize = 10,
+                    UnitWidth = 1,
+                    MinStep = 1,
+                    ForceStepToMin = true
+                }
+            };
+
+            YAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "Books",
+                    LabelsPaint = whiteTextPaint
+                }
+            };
+
+
+            DataContext = this; 
         }
+
     }
 }

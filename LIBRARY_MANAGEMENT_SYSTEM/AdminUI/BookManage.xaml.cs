@@ -35,5 +35,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             removeBook.Show();
         }
 
+        private void showBooks(object sender, RoutedEventArgs e)
+        {
+            Books books = new Books();
+            books.Show();
+        }
+
     }
 }

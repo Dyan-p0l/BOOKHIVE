@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions.Books"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Books" Height="730" Width="1060">
+    <Grid>
+        <DataGrid x:Name="BookDataGrid"
+              AutoGenerateColumns="True"
+              IsReadOnly="True"
+              GridLinesVisibility="All"
+              HorizontalGridLinesBrush="White"
+              VerticalGridLinesBrush="White"
+              RowDetailsVisibilityMode="Collapsed"
+              CanUserAddRows="False"
+              Margin="22,96,27,10" FontSize="16" FontWeight="Bold"
+              Loaded="BookDataGrid_Loaded" BorderBrush="#FFFDFDFD"/>
+        <Grid Background="Black" HorizontalAlignment="Center" Height="76" VerticalAlignment="Top" Width="1060"/>
+        <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="10,10,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#004994FF">
+            <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="42" Foreground="#FFFDFDFD"/>
+        </Button>
+        <Label Content="BOOKS IN THE LIBRARY" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="48" Width="310" FontSize="26" FontWeight="Bold" Foreground="#FFFFCE5C"/>
+    </Grid>
+</Window>

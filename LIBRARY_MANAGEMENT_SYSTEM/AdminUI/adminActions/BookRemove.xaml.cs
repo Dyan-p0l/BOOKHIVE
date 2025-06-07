@@ -36,7 +36,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
             string title = txtTitle.Text.Trim();
             string author = txtAuthor.Text.Trim();
             string id = txtId.Text.Trim();
-
+            string Action = "";
+            DateTime currentDateTime = DateTime.Now;
 
             if (string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(author) && string.IsNullOrWhiteSpace(id))
             {
@@ -57,8 +58,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                 using (SqlConnection connection = db.GetConnection())
                 {
                     connection.Open();
-
-                    string checkQuery = "SELECT COUNT(*) FROM Books WHERE IDNumber = @IDNum";
+                        
+                    string checkQuery = "SELECT COUNT(*) FROM Books WHERE BookID = @IDNum";
                     using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
                     {
                         checkCmd.Parameters.AddWithValue("@IDNum", id);
@@ -71,7 +72,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         }
                     }
 
-                    string deleteQuery = "DELETE FROM Books WHERE IDNumber = @IDNum";
+                    string deleteQuery = "DELETE FROM Books WHERE BookID = @IDNum";
                     using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, connection))
                     {
                         deleteCmd.Parameters.AddWithValue("@IDNum", id);
@@ -88,6 +89,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI.adminActions
                         {
                             MessageBox.Show("Failed to delete the book. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
+                    }
+                    
+                    Action = $"Book DELETED: {title}, with ID:[{id}]";
+
+                    string actionQuery = "INSERT INTO AdminActions (actions, date) VALUES (@Action, @Date)";
+                    using (SqlCommand insertCmd = new SqlCommand(actionQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@Action", Action);
+                        insertCmd.Parameters.AddWithValue("@Date", currentDateTime);
+                        int result = insertCmd.ExecuteNonQuery();
                     }
                 }
             }

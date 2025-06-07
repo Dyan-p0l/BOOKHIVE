@@ -33,10 +33,10 @@
                 <iconPacks:PackIconFontAwesome 
                     Kind="EnvelopeSolid" 
                     Width="21" 
-                    Height="21" 
-                    Foreground="Black" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <TextBlock HorizontalAlignment="Left" Height="16" Margin="61,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
-                <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,0,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Center" Width="588" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16"/>
+                    Height="20" 
+                    Foreground="Black" Margin="30,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Left" Height="16" Margin="81,0,0,0" TextWrapping="Wrap" Text="06 - 07 - 2025&#x9;" VerticalAlignment="Center" Width="75" RenderTransformOrigin="2.022,0.527"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="257,4,0,0" TextWrapping="Wrap" Text="You have borrowed a book titled &quot;Attack on Titan&quot;. Return date : 07-07-2025" VerticalAlignment="Top" Width="588" RenderTransformOrigin="2.022,0.527" FontWeight="Bold" FontSize="16"/>
             </Grid>
             <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,55,0,0" VerticalAlignment="Top" Width="748">
                 <iconPacks:PackIconFontAwesome 
