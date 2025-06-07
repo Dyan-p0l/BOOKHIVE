@@ -60,19 +60,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Users-Actions Insert
-                    string insertUserAction = @"INSERT INTO [Users-Actions] (Username, Action, Date, Status)
-                                                VALUES (@Username, @Action, @Date, @Status)";
-
-                    using (SqlCommand cmd = new SqlCommand(insertUserAction, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", currentUsername);
-                        cmd.Parameters.AddWithValue("@Action", "Return");
-                        cmd.Parameters.AddWithValue("@Date", now);
-                        cmd.Parameters.AddWithValue("@Status", "Pending");
-                        cmd.ExecuteNonQuery();
-                    }
-
                     MessageBox.Show("Return request submitted successfully.");
                     this.Close();
                 }

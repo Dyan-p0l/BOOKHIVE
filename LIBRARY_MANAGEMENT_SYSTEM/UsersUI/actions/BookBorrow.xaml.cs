@@ -70,19 +70,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions
                         cmd.ExecuteNonQuery();
                     }
 
-                    // INSERT INTO Users-Actions
-                    string insertUserAction = @"INSERT INTO [Users-Actions] (Username, Action, Date, Status)
-                                        VALUES (@Username, @Action, @Date, @Status)";
-
-                    using (SqlCommand cmd = new SqlCommand(insertUserAction, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", currentUsername);
-                        cmd.Parameters.AddWithValue("@Action", "Borrow");
-                        cmd.Parameters.AddWithValue("@Date", now);
-                        cmd.Parameters.AddWithValue("@Status", "Pending");
-                        cmd.ExecuteNonQuery();
-                    }
-
                     MessageBox.Show("Borrow request submitted successfully.");
                     this.Close();
                 }

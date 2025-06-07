@@ -31,7 +31,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             MainContentFrame.Navigate(new UsersUI.UserHomepage(MainContentFrame)); 
             SetActiveButton(HomeButton); 
         }
-        
+
+        public void UpdateWelcomeMessage(string newUsername)
+        {
+            lblWelcome.Text = $"Welcome, {newUsername}!";
+        }
+
         private void SetActiveButton(Button activeButton)
         {
             var buttons = new List<Button> { HomeButton, AccountButton, BooksButton, HistoryButton, LogoutButton };
@@ -96,7 +101,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void accountClick(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new UsersUI.UserAccount());
+            MainContentFrame.Navigate(new UsersUI.UserAccount(this));
             SetActiveButton(AccountButton);
         }
 
