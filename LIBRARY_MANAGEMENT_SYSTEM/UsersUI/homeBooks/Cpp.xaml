@@ -27,7 +27,7 @@
                 </Label>
                 <Label Content="Author : Xavier S. Martin" HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top" Height="35" Width="203" FontSize="16" FontWeight="Bold" Foreground="#FFFFCE5C"/>
                 <Button Click="Submit_Click" Content="Borrow" HorizontalAlignment="Left" Height="47" Margin="39,149,0,0" VerticalAlignment="Top" Width="110" BorderBrush="#00707070" Background="#FFFF5C5C" FontWeight="Bold"/>
-                <Button Content="Add to Collection" HorizontalAlignment="Left" Height="47" Margin="162,149,0,0" VerticalAlignment="Top" Width="115" BorderBrush="#00707070" Background="#FFFFCE5C" FontWeight="Bold"/>
+                <Button Click="Playlist_Click" Content="Add to Collection" HorizontalAlignment="Left" Height="47" Margin="162,149,0,0" VerticalAlignment="Top" Width="115" BorderBrush="#00707070" Background="#FFFFCE5C" FontWeight="Bold"/>
                 <Label Content="Genre: Educational, Technical, Programming, Computer Science" Margin="33,96,9,0" VerticalAlignment="Top" Height="31" FontWeight="Bold" Foreground="#FFFAF7F0"/>
             </Grid>
             <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="20,28,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#00000000">

@@ -48,6 +48,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             pending.Show();
         }
 
+        private void showPlaylist(object sender, EventArgs e)
+        {
+            Playlist playlist = new Playlist();
+            playlist.Show();
+        }   
         private void LoadChartData()
         {
             int borrowedCount = 0;
