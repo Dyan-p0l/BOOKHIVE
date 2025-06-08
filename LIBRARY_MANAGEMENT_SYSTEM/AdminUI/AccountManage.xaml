@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="AccountManage" Height="616" Width="878">
+        Title="AccountManage" Height="616" Width="988">
     <Grid Background="White">
         <DataGrid x:Name="AccountDataGrid"
       AutoGenerateColumns="True"
@@ -16,7 +16,7 @@
       VerticalGridLinesBrush="White"
       RowDetailsVisibilityMode="Collapsed"
       CanUserAddRows="False"
-      Margin="24,53,24,53" FontSize="16" FontWeight="Bold"
+      Margin="0,53,0,53" FontSize="16" FontWeight="Bold"
       Loaded="AccountDataGrid_Loaded" BorderBrush="#FFFDFDFD"/>
     </Grid>
 </Page>

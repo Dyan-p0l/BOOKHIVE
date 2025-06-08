@@ -1,10 +1,11 @@
-﻿<Page x:Class="LIBRARY_MANAGEMENT_SYSTEM.AdminUI.AdminHomepage"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.AdminUI"
       xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="LIBRARY_MANAGEMENT_SYSTEM.AdminUI.AdminHomepage"
       mc:Ignorable="d" 
       d:DesignHeight="616" d:DesignWidth="1073"
       Title="AdminHomepage">
@@ -32,6 +33,31 @@
         </Grid>
         <Label Content="BOOKS" HorizontalAlignment="Left" Margin="204,14,0,0" VerticalAlignment="Top" Width="59" Foreground="#FFFDFDFD" FontWeight="Bold" FontSize="14"/>
         <Label Content="BOOKS EACH GENRE" HorizontalAlignment="Left" Margin="707,2,0,0" VerticalAlignment="Top" Width="162" Foreground="Black" FontWeight="Bold" FontSize="14"/>
+        <Grid Background="#E0E0E0" HorizontalAlignment="Left" Height="258" Margin="25,308,0,0" VerticalAlignment="Top" Width="286">
+            <Grid Background="#FF5C5C" HorizontalAlignment="Center" Height="66" VerticalAlignment="Top" Width="286">
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="TOTAL NUMBER OF USERS" VerticalAlignment="Center" Height="24" Width="238" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="18"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="143" Margin="132,92,0,0" VerticalAlignment="Top" Width="131">
+                <TextBlock x:Name="numAcc" HorizontalAlignment="Left" Height="123" TextWrapping="Wrap" VerticalAlignment="Center" Width="121" FontSize="60" Margin="10,0,0,0" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+
+            </Grid>
+            <iconPacks:PackIconFontAwesome Kind="CircleUserSolid" Width="114" Height="88" Foreground="Black" Margin="10,111,0,0"/>
+        </Grid>
+        <Grid Background="#E0E0E0" HorizontalAlignment="Left" Height="258" Margin="395,308,0,0" VerticalAlignment="Top" Width="286">
+            <Grid Background="#2F85FE" HorizontalAlignment="Center" Height="66" VerticalAlignment="Top" Width="286">
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="TOTAL NUMBER OF BOOKS" VerticalAlignment="Center" Height="24" Width="246" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="18"/>
+            </Grid>
+            <TextBlock x:Name="numBook" HorizontalAlignment="Left" Height="123" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" FontSize="60" Margin="143,103,0,0" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+            <iconPacks:PackIconFontAwesome Kind="BookSolid" Width="114" Height="88" Foreground="Black" Margin="2,106,0,0"/>
+        </Grid>
+        <Grid Background="#E0E0E0" HorizontalAlignment="Left" Height="258" Margin="759,308,0,0" VerticalAlignment="Top" Width="286">
+            <Grid Background="#FFD32C" HorizontalAlignment="Center" Height="66" VerticalAlignment="Top" Width="286">
+                <TextBlock HorizontalAlignment="Left" Margin="395,17,0,0" TextWrapping="Wrap" Text="TOTAL NUMBER OF USERS" VerticalAlignment="Top" Height="24" Width="164"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="179" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="18" Margin="71,8,0,0"><Run Text="TOTAL NUMBER "/><LineBreak/><Run Text="OF LIBRARIANS"/></TextBlock>
+            </Grid>
+            <TextBlock x:Name="numAcc_Copy1" HorizontalAlignment="Left" Height="88" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" FontSize="60" Margin="202,111,0,0" FontFamily="Segoe UI Black" FontWeight="Bold" Text="1"/>
+            <iconPacks:PackIconFontAwesome Kind="UserTieSolid" Width="114" Height="88" Foreground="Black" Margin="4,101,0,0"/>
+        </Grid>
 
     </Grid>
 </Page>

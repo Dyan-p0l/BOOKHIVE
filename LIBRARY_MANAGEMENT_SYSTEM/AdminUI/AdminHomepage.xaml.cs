@@ -9,6 +9,9 @@ using LiveChartsCore.Defaults;
 using LIBRARY_MANAGEMENT_SYSTEM.UsersUI.actions;
 using LiveChartsCore.Kernel;
 using LiveChartsCore.Kernel.Sketches;
+using Microsoft.Data.SqlClient;
+using System.Windows;
+using LIBRARY_MANAGEMENT_SYSTEM.backend;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 {
@@ -27,6 +30,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             int totalBooks = 100; // You should get this from the database
             int borrowedBooks = 40;
             int availableBooks = totalBooks - borrowedBooks;
+
+            numAcc.Text = getAccCount().ToString();
+            numBook.Text = getBookCount().ToString();
 
             Series = new ISeries[]
             {
@@ -91,9 +97,61 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
                 }
             };
 
-
             DataContext = this; 
         }
+
+        private int getAccCount()
+        {
+            int count = 0;
+
+            try
+            {
+                dbConnection db = new dbConnection();
+                using (SqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Users WHERE UserType = 'User'"; // Replace with your table name
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        count = (int)cmd.ExecuteScalar(); // Efficient way to get a single value
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error counting rows: " + ex.Message);
+            }
+
+            return count;
+        }
+
+        private int getBookCount()
+        {
+            int count = 0;
+
+            try
+            {
+                dbConnection db = new dbConnection();
+                using (SqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Books"; // Replace with your table name
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        count = (int)cmd.ExecuteScalar(); // Efficient way to get a single value
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error counting rows: " + ex.Message);
+            }
+
+            return count;
+        }
+
 
     }
 }
