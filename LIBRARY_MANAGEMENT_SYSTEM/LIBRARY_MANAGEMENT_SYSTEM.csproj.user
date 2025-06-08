@@ -67,6 +67,9 @@
     <Compile Update="UsersUI\homeBooks\Potter2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UsersUI\Pending.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UsersUI\UserAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,6 +151,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\homeBooks\Potter2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersUI\Pending.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UsersUI\UserAccount.xaml">

@@ -31,6 +31,54 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             int borrowedBooks = 40;
             int availableBooks = totalBooks - borrowedBooks;
 
+
+            int fictionCount = 0;
+            int engineeringCount = 0;
+            int scienceCount = 0;
+            int romanceCount = 0;
+            int programmingCount = 0;
+            int sciFiCount = 0;
+            int historyCount = 0;
+
+            try
+            {
+                dbConnection db = new dbConnection();
+                using (SqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    string query = @"
+                    SELECT
+                        SUM(CASE WHEN Genre LIKE '%Fiction%' THEN 1 ELSE 0 END) AS Fiction,
+                        SUM(CASE WHEN Genre LIKE '%Science%' THEN 1 ELSE 0 END) AS Science,
+                        SUM(CASE WHEN Genre LIKE '%Romance%' THEN 1 ELSE 0 END) AS Romance,
+                        SUM(CASE WHEN Genre LIKE '%Computer Programming%' THEN 1 ELSE 0 END) AS Computer_Programming,
+                        SUM(CASE WHEN Genre LIKE '%Engineering%' THEN 1 ELSE 0 END) AS Engineering,
+                        SUM(CASE WHEN Genre LIKE '%Science Fiction%' THEN 1 ELSE 0 END) Scifi
+                    FROM Books";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                fictionCount = reader["Fiction"] != DBNull.Value ? Convert.ToInt32(reader["Fiction"]) : 0;
+                                engineeringCount = reader["Engineering"] != DBNull.Value ? Convert.ToInt32(reader["Engineering"]) : 0;
+                                scienceCount = reader["Science"] != DBNull.Value ? Convert.ToInt32(reader["Science"]) : 0;
+                                romanceCount = reader["Romance"] != DBNull.Value ? Convert.ToInt32(reader["Romance"]) : 0;
+                                programmingCount = reader["Computer_Programming"] != DBNull.Value ? Convert.ToInt32(reader["Computer_Programming"]) : 0;
+                                sciFiCount = reader["Scifi"] != DBNull.Value ? Convert.ToInt32(reader["Scifi"]) : 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading chart data: " + ex.Message);
+            }
+
             numAcc.Text = getAccCount().ToString();
             numBook.Text = getBookCount().ToString();
 
@@ -42,12 +90,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 
             var bookCounts = new List<ObservableValue>
             {
-                new ObservableValue(120),
-                new ObservableValue(95),
-                new ObservableValue(30),
-                new ObservableValue(12),
-                new ObservableValue(15),
-                new ObservableValue(18)
+                new ObservableValue(fictionCount),
+                new ObservableValue(scienceCount),
+                new ObservableValue(historyCount),
+                new ObservableValue(engineeringCount),
+                new ObservableValue(sciFiCount),
+                new ObservableValue(programmingCount)
             };
 
             string[] genres = new[]{"Fiction", "Science", "History", "Engineering", "Sci-Fi", "Computer Programming"};
