@@ -34,6 +34,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             numAcc.Text = getAccCount().ToString();
             numBook.Text = getBookCount().ToString();
 
+            Series = new ISeries[]
+            {
+                new PieSeries<int> { Values = new[] { borrowedBooks }, Name = "Books with borrowed copies"},
+                new PieSeries<int> { Values = new[] { availableBooks }, Name = "Books without borrowed copies"}
+            };
+
             Dictionary<string, int> genreCounts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
             try
@@ -73,6 +79,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
                 MessageBox.Show("Error loading genre data: " + ex.Message);
                 genreCounts = new Dictionary<string, int>(); // fallback
             }
+
             SKColor[] colors = new[]
             {
                 SKColor.Parse("#FF5C5C"),
@@ -84,22 +91,32 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             };
 
             var whiteTextPaint = new SolidColorPaint(SKColors.White);
-            
+
+            SKColor[] chartColors = new[]
+            {
+            SKColors.Red, SKColors.Green, SKColors.Blue,
+            SKColors.Orange, SKColors.Purple, SKColors.Teal,
+            SKColors.Yellow, SKColors.Pink, SKColors.Brown,
+            SKColors.Gray
+};
+
+            int colorIndex = 0;
+
             Series = genreCounts.Select((kvp, index) => new PieSeries<int>
             {
                 Values = new[] { kvp.Value },
                 Name = kvp.Key,
-                Fill = new SolidColorPaint(colors[index % colors.Length]),
+                Fill = new SolidColorPaint(chartColors[index % chartColors.Length]),
                 DataLabelsSize = 11,
-                DataLabelsPosition = PolarLabelsPosition.Outer,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Outer,
                 DataLabelsPaint = new SolidColorPaint(SKColors.White)
             }).ToArray();
 
-            ColumnSeries = genreCounts.Select((kvp, index) => new ColumnSeries<ObservableValue>
+            ColumnSeries = genreCounts.Select(kvp => new ColumnSeries<ObservableValue>
             {
                 Values = new[] { new ObservableValue(kvp.Value) },
                 Name = kvp.Key,
-                Fill = new SolidColorPaint(colors[index % colors.Length]),
+                Fill = new SolidColorPaint(chartColors[colorIndex++ % chartColors.Length]),
                 MaxBarWidth = 60,
                 DataLabelsPaint = whiteTextPaint,
                 DataLabelsSize = 11,
@@ -128,7 +145,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
                 }
             };
 
-            DataContext = this; 
+            DataContext = this;
         }
 
         private int getAccCount()
