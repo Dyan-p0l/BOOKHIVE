@@ -87,5 +87,54 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             }
         }
 
+        private void Playlist_Click(object sender, RoutedEventArgs e)
+        {
+            string title = "Harry Potter and the Deathly Hallows";
+            string bookIdText = "23036";
+            string genre = "Fiction";
+            string author = "J.K. Rowling";
+
+            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(bookIdText))
+            {
+                MessageBox.Show("Please enter the book title and book ID.");
+                return;
+            }
+
+            if (!int.TryParse(bookIdText, out int bookId))
+            {
+                MessageBox.Show("Book ID must be a valid number.");
+                return;
+            }
+
+            dbConnection db = new dbConnection();
+            using (SqlConnection conn = db.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+
+                    string insertAdminLog = @"INSERT INTO Favorites (Username, Title, BookID, Genre, Author)
+                              VALUES (@username, @title, @bookID, @genre, @author)";
+
+                    using (SqlCommand cmd = new SqlCommand(insertAdminLog, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", currentUsername);
+                        cmd.Parameters.AddWithValue("@title", title);
+                        cmd.Parameters.AddWithValue("@bookID", bookId);
+                        cmd.Parameters.AddWithValue("@genre", genre);
+                        cmd.Parameters.AddWithValue("@author", author);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Saved Succesfully", "Added to Playlist");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error/Unsuccessful: " + ex.Message);
+                }
+            }
+        }
+
+
     }
 }

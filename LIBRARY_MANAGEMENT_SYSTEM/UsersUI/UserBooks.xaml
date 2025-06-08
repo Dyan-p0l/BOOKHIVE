@@ -38,7 +38,7 @@
                     HorizontalAlignment="Center" TextAlignment="Center" FontWeight="Bold" Foreground="White"/>
                 </StackPanel>
             </Button>
-            <Button HorizontalAlignment="Left" Height="102" Margin="515,120,0,0" VerticalAlignment="Top" Width="224" BorderBrush="#00707070" Background="#FFFFD32C">
+            <Button Click="showPlaylist" HorizontalAlignment="Left" Height="102" Margin="515,120,0,0" VerticalAlignment="Top" Width="224" BorderBrush="#00707070" Background="#FFFFD32C">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="102">
                     <iconPacks:PackIconFontAwesome Kind="BookmarkSolid" Width="60" Height="50" Foreground="Black" Margin="20,0,0,5"/>
                     <TextBlock Text="SAVED BOOKS" FontSize="14"
