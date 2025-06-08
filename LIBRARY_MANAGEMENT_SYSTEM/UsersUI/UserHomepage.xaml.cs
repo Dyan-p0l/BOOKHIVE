@@ -25,6 +25,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
         private Frame _parentFrame;
         private string currentUsername = dataStore.CurrentUsername;
         public List<Notify> notifyList { get; set; } = new List<Notify>();
+        public List<Books> bookList { get; set; } = new List<Books>();
 
         public UserHomepage(Frame parentFrame)
         {            
@@ -78,6 +79,45 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             }
         }
 
+        private void LoadBooksFromDatabase(string searchTerm = "")
+        {
+            dbConnection db = new dbConnection();
+            List<Book> books = new List<Book>();
+            bookList.Clear();
+
+            using (SqlConnection connection = db.GetConnection())
+            {
+                
+                string query = @"SELECT Title, BookID, Author FROM Books WHERE Title LIKE @search OR Author LIKE @search";
+
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
+                
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    bookList.Add(new Books
+                    {
+                        title = reader["Title"].ToString(),
+                        bookID = Convert.ToInt32(reader["BookID"]),
+                        author = reader["Author"].ToString()
+                    });
+                }
+
+                reader.Close();
+            }
+            BookItemsControl.ItemsSource = null;
+            BookItemsControl.ItemsSource = bookList;
+        }
+
+        private void searchBook(object sender, TextChangedEventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
+            LoadBooksFromDatabase(searchText);
+            resultExander.IsExpanded = true;
+        }
 
         private void showAot1(object sender, MouseButtonEventArgs e)
         {
@@ -113,7 +153,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
         {
             _parentFrame.Navigate(new Cpp(_parentFrame));
         }
-       
+        
         private void showJava(object sender, MouseButtonEventArgs e)
         {
             _parentFrame.Navigate(new Java(_parentFrame));
@@ -143,7 +183,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             }
         }
 
+    }
 
+    public class Books
+    {
+        public string title { get; set; }
+        public string author { get; set; }
+        public int bookID { get; set; }
     }
 
 
