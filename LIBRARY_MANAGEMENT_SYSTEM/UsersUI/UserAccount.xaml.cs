@@ -135,16 +135,32 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
                                 logCmd.ExecuteNonQuery();
                             }
 
-                            // Update current session username
-                            dataStore.CurrentUsername = newUsername;
-                            _dashboard.UpdateWelcomeMessage(newUsername);
-                            lblFullname.Text = newFullName.ToUpper();
+                            if (rows > 0)
+                            {
+                                // Update AdminLogs table to reflect the new username
+                                string updateFaveQuery = @"
+                        UPDATE Favorites
+                        SET UserName = @NewUsername
+                        WHERE UserName = @OldUsername";
 
-                            MessageBox.Show("Account updated successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Update failed.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                                using (SqlCommand logCmd = new SqlCommand(updateFaveQuery, conn))
+                                {
+                                    logCmd.Parameters.AddWithValue("@NewUsername", newUsername);
+                                    logCmd.Parameters.AddWithValue("@OldUsername", oldUsername);
+                                    logCmd.ExecuteNonQuery();
+                                }
+
+                                // Update current session username
+                                dataStore.CurrentUsername = newUsername;
+                                _dashboard.UpdateWelcomeMessage(newUsername);
+                                lblFullname.Text = newFullName.ToUpper();
+
+                                MessageBox.Show("Account updated successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Update failed.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
                         }
                     }
                 }
