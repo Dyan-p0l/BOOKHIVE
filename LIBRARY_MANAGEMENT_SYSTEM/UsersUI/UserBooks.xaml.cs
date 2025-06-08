@@ -42,6 +42,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
             LoadChartData();
         }
 
+        private void showPending(object sender, EventArgs e) 
+        { 
+            Pending pending = new Pending();
+            pending.Show();
+        }
+
         private void LoadChartData()
         {
             int borrowedCount = 0;
@@ -55,7 +61,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
                 {
                     conn.Open();
                     string query = @"
-                    SELECT 
+                    SELECT
                         SUM(CASE WHEN Action = 'Borrow' THEN 1 ELSE 0 END) AS Borrowed,
                         SUM(CASE WHEN Action = 'Return' THEN 1 ELSE 0 END) AS Returned,
                         SUM(CASE WHEN Status = 'Overdue' THEN 1 ELSE 0 END) AS Overdue

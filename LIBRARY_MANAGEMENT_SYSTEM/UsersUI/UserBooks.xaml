@@ -45,7 +45,7 @@
                     HorizontalAlignment="Center" TextAlignment="Center" FontWeight="Bold" Foreground="Black"/>
                 </StackPanel>
             </Button>
-            <Button HorizontalAlignment="Left" Height="101" Margin="10,227,0,0" VerticalAlignment="Top" Width="363" BorderBrush="#00707070" Background="#FF6E1E1E">
+            <Button Click="showPending" HorizontalAlignment="Left" Height="101" Margin="10,227,0,0" VerticalAlignment="Top" Width="363" BorderBrush="#00707070" Background="#FF6E1E1E">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="10,0,20,0" VerticalAlignment="Center">
                         <TextBlock Text="PENDING" Foreground="White"

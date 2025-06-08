@@ -1,0 +1,66 @@
+﻿<Window x:Class="LIBRARY_MANAGEMENT_SYSTEM.UsersUI.Pending"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY_MANAGEMENT_SYSTEM.UsersUI"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Pending" Height="730" Width="940">
+    <Grid>
+        <Grid Background="#FFFFCE5C" HorizontalAlignment="Center" Height="76" VerticalAlignment="Top" Width="1060"/>
+        <Button Click="backBtn" HorizontalAlignment="Left" Height="56" Margin="10,10,0,0" VerticalAlignment="Top" Width="62" BorderBrush="#00707070" Background="#004994FF">
+            <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Width="52" Height="42" Foreground="Black"/>
+        </Button>
+        <Label Content="PENDING ACTIONS" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="48" Width="245" FontSize="26" FontWeight="Bold" Foreground="#FF141414"/>
+        <Grid HorizontalAlignment="Center" Height="497" Margin="0,119,0,0" VerticalAlignment="Top" Width="961">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding bookLogs}" Height="551">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="#F0EEEE" HorizontalAlignment="Center" Height="31" Margin="0,10,0,0" Width="820">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <!-- Icon -->
+                                    <ColumnDefinition Width="85"/>
+                                    <!-- Date -->
+                                    <ColumnDefinition Width="*"/>
+                                    <!-- Action text -->
+                                </Grid.ColumnDefinitions>
+
+                                <iconPacks:PackIconFontAwesome 
+                        Kind="EnvelopeSolid" 
+                        Width="21" 
+                        Height="21" 
+                        Foreground="Black"
+                        VerticalAlignment="Center"
+                        Margin="10,0,0,0"/>
+
+                                <TextBlock Grid.Column="1"
+                       Text="{Binding dateAdded}"
+                       VerticalAlignment="Center"
+                       Margin="0,0,0,0"
+                       TextWrapping="NoWrap"
+                       FontSize="14"
+                       HorizontalAlignment="Left"/>
+
+                                <TextBlock Grid.Column="2"
+                       Text="{Binding Message}"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       FontSize="16"
+                       TextTrimming="CharacterEllipsis"
+                       TextWrapping="NoWrap"
+                       Margin="10,0,10,0"
+                       HorizontalAlignment="Left"/>
+
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
