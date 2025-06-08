@@ -67,25 +67,15 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                                     AdminDashboard adminDashboard = new AdminDashboard();
                                     adminDashboard.Show();
                                     this.Close();
-                                    MessageBox.Show(
-                                            $"Welcome, Admin! 🎉",         // Message
-                                            "Login Successful",                 // Header/Title
-                                            MessageBoxButton.OK,                // Button
-                                            MessageBoxImage.Information         // Icon
-                                        );
+                                    MessageBox.Show($"Welcome, Admin! 🎉", "Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                                 }
                                 else if (userType == "User")
                                 {
-                                    dataStore.CurrentUsername = username; 
+                                    dataStore.CurrentUsername = username;
                                     UserDashboard userDashboard = new UserDashboard();
                                     userDashboard.Show();
                                     this.Close();
-                                    MessageBox.Show(
-                                            $"Welcome, {username}! 🎉",         
-                                            "Login Successful",                 
-                                            MessageBoxButton.OK,                
-                                            MessageBoxImage.Information         
-                                    );
+                                    MessageBox.Show($"Welcome, {username}! 🎉", "Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                                 }
                                 else
                                 {
@@ -96,8 +86,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                             {
                                 MessageBox.Show("Invalid username or password.");
                             }
-
                         }
+                        else
+                        {
+                            // ✅ This will show when no matching record is found
+                            MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        }
+
                     }
                 }
                 catch (SqlException ex)
