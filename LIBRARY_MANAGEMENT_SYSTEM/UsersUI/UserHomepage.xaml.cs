@@ -37,12 +37,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
 
         private void NotificationIcon_Click(object sender, MouseButtonEventArgs e)
         {
-            // Toggle visibility
             NotificationPanel.Visibility = NotificationPanel.Visibility == Visibility.Visible
                 ? Visibility.Collapsed
                 : Visibility.Visible;
 
-            // Prevent the event from bubbling further
             e.Handled = true;
         }
 
@@ -60,6 +58,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
                         cmd.Parameters.AddWithValue("@Username", currentUsername);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
+                            int count = 0;
                             while (reader.Read())
                             {
                                 notifyList.Add(new Notify
@@ -68,7 +67,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.UsersUI
                                     action = reader["Action"].ToString(),   
                                     status = reader["Status"].ToString()
                                 });
+                                count++;
                             }
+
+                            notifCount.Text = count.ToString();
+
                         }
                     }
                 }
