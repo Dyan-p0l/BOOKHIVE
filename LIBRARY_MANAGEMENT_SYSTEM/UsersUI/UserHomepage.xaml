@@ -8,21 +8,56 @@
         mc:Ignorable="d"
         Title="UserHomepage" Height="612" Width="874">
     <Grid Background="White">
+        <Border x:Name="NotificationPanel"
+            Background="#FFCE5C"
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="8"
+            Padding="10"
+            Width="347"
+            Height="477"
+            HorizontalAlignment="Right"
+            Visibility="Collapsed"
+            VerticalAlignment="Top"
+            Margin="0,73,24,0"
+            Panel.ZIndex="100">
 
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding notifyList}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="#F2B628" HorizontalAlignment="Center" Height="51" Margin="0,10,0,0" Width="310">
+                                <TextBlock 
+                               Text="{Binding Message}"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               Foreground="Black"      
+                               FontSize="12"
+                               TextTrimming="CharacterEllipsis"
+                               TextWrapping="NoWrap"
+                               Margin="10,0,10,0"
+                               HorizontalAlignment="Left"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Border>
         <Grid Background="White" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="863" Grid.ColumnSpan="2">
-            <TextBox Padding="10"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="115,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
+            <TextBox x:Name="txtSearch" Padding="10" TextChanged="searchBook" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="115,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="496" Height="52" Background="#FFE2E2E2" BorderBrush="#00ABADB3" FontWeight="Bold" FontSize="16">
                 <TextBox.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="8" Opacity="0.3"/>
                 </TextBox.Effect>
             </TextBox>
-            <Grid HorizontalAlignment="Left" Height="75" Margin="756,0,0,0" VerticalAlignment="Center" Width="79">
+            <Grid MouseLeftButtonUp="NotificationIcon_Click" HorizontalAlignment="Left" Height="75" Margin="756,0,0,0" VerticalAlignment="Center" Width="79">
                 <iconPacks:PackIconFontAwesome 
-                    Kind="BellSolid" 
-                    Width="40" 
-                    Height="40" 
-                    Foreground="Black"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
+                Kind="BellSolid" 
+                Width="40" 
+                Height="40" 
+                Foreground="Black"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
 
                 <Border Background="Red"
                     Width="25"
@@ -31,7 +66,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="0,10,14,0">
-                    <TextBlock Text="99"
+                    <TextBlock x:Name="notifCount"
                         Foreground="White"
                         FontSize="16"
                         FontWeight="Bold"
@@ -39,6 +74,7 @@
                         VerticalAlignment="Center"/>
                 </Border>
             </Grid>
+
             <Button Height="52" HorizontalAlignment="Left" Margin="622,18,0,0" VerticalAlignment="Top" Width="64" BorderBrush="#00707070" Background="#FF1A1A1A">
                 <iconPacks:PackIconFontAwesome 
                 Kind="MagnifyingGlassSolid" 
@@ -107,5 +143,23 @@
                 </StackPanel>
             </Grid>
         </Grid>
+        <Expander x:Name="resultExander" Background="#EFEFEF" Header="Books" IsExpanded="False" Margin="111,75,0,0" Width="503" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ScrollViewer Height="400" VerticalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="BookItemsControl">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="5" Padding="10" Background="#E0E0E0" CornerRadius="5">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding title}" FontWeight="Bold" Foreground="Black" FontSize="14"/>
+                                    <TextBlock Text="{Binding author}" Foreground="Black" FontSize="12"/>
+                                    <TextBlock Text="{Binding bookID}" Foreground="Black" FontSize="8"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Expander>
+
     </Grid>
 </Page>

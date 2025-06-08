@@ -9,10 +9,18 @@
         mc:Ignorable="d"
         Title="BookManage" Height="616" Width="878">
     <Grid Background="White">
-        <Button Click="showBooks" Content="VIEW BOOKS LISTS" HorizontalAlignment="Left" Height="113" Margin="504,132,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
-        <Button Click="showAdd" Content="ADD A BOOK" HorizontalAlignment="Left" Height="113" Margin="130,132,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
-        <Button Click="showRemove" Content="REMOVE BOOKS" HorizontalAlignment="Left" Height="113" Margin="130,308,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
-        <Button Click="showBookLog" Content="VIEW BOOK LOGS" HorizontalAlignment="Left" Height="113" Margin="504,308,0,0" VerticalAlignment="Top" Width="222" FontWeight="Bold" FontSize="16" BorderBrush="#00707070"/>
+        <TextBlock x:Name="ClockText"
+           FontSize="130"
+           FontWeight="Bold"
+           FontFamily="pack://application:,,,/resources/#Seven Segment"
+           Foreground="Black"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Top"
+           Margin="0,66,0,0" Width="627" Height="111"/>
+        <Button Click="showBooks" Content="VIEW BOOKS LISTS" HorizontalAlignment="Left" Height="131" Margin="458,238,0,0" VerticalAlignment="Top" Width="240" FontWeight="Bold" FontSize="16" BorderBrush="#00707070" Background="#FF0BC3A1"/>
+        <Button Click="showAdd" Content="ADD A BOOK" HorizontalAlignment="Left" Height="131" Margin="154,238,0,0" VerticalAlignment="Top" Width="245" FontWeight="Bold" FontSize="16" BorderBrush="#00707070" Background="#FFFFCE5C"/>
+        <Button Click="showRemove" Content="REMOVE BOOKS" HorizontalAlignment="Left" Height="126" Margin="154,402,0,0" VerticalAlignment="Top" Width="245" FontWeight="Bold" FontSize="16" BorderBrush="#00707070" Background="#FFFF5653"/>
+        <Button Click="showBookLog" Content="PENDING BOOK &#xD;&#xA;REQUESTS" HorizontalAlignment="Left" Height="126" Margin="458,402,0,0" VerticalAlignment="Top" Width="239" FontWeight="Bold" FontSize="16" BorderBrush="#00707070" Background="#FFFFB13D"/>
 
     </Grid>
 </Page>

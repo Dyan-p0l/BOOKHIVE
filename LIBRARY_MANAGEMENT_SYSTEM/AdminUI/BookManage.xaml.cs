@@ -12,15 +12,32 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
 {
 
+
     public partial class BookManage : Page
     {
+
+        private DispatcherTimer clockTimer;
+
         public BookManage()
         {
             InitializeComponent();
+            SetupClock();
+        }
+
+        private void SetupClock()
+        {
+            clockTimer = new DispatcherTimer();
+            clockTimer.Interval = TimeSpan.FromSeconds(1);
+            clockTimer.Tick += (sender, args) =>
+            {
+                ClockText.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            };
+            clockTimer.Start();
         }
 
         private void showAdd(object sender, RoutedEventArgs e)
