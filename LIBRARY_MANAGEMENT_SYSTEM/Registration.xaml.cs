@@ -92,7 +92,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         if (result > 0)
                         {
                             MessageBox.Show(
-                                $"Registration Suggestion! 🎉",         // Message
+                                $"Registration Success! 🎉",         // Message
                                 "REGISTRATION",                 // Header/Title
                                 MessageBoxButton.OK,                // Button
                                 MessageBoxImage.Information         // Icon

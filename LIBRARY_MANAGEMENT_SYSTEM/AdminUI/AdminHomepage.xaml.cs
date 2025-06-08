@@ -34,24 +34,45 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             numAcc.Text = getAccCount().ToString();
             numBook.Text = getBookCount().ToString();
 
-            Series = new ISeries[]
+            Dictionary<string, int> genreCounts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
+            try
             {
-                new PieSeries<int> { Values = new[] { borrowedBooks }, Name = "Books with borrowed copies"},
-                new PieSeries<int> { Values = new[] { availableBooks }, Name = "Books without borrowed copies"}
-            };
+                dbConnection db = new dbConnection();
+                using (SqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT Genre FROM Books"; // Ensure "Genre" is the correct column name
 
-            var bookCounts = new List<ObservableValue>
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string genreRaw = reader.GetString(0);
+                            if (string.IsNullOrWhiteSpace(genreRaw)) continue;
+
+                            // Split by comma, trim whitespace
+                            var genres = genreRaw.Split(',')
+                                                 .Select(g => g.Trim())
+                                                 .Where(g => !string.IsNullOrEmpty(g));
+
+                            foreach (var genre in genres)
+                            {
+                                if (genreCounts.ContainsKey(genre))
+                                    genreCounts[genre]++;
+                                else
+                                    genreCounts[genre] = 1;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
             {
-                new ObservableValue(120),
-                new ObservableValue(95),
-                new ObservableValue(30),
-                new ObservableValue(12),
-                new ObservableValue(15),
-                new ObservableValue(18)
-            };
-
-            string[] genres = new[]{"Fiction", "Science", "History", "Engineering", "Sci-Fi", "Computer Programming"};
-
+                MessageBox.Show("Error loading genre data: " + ex.Message);
+                genreCounts = new Dictionary<string, int>(); // fallback
+            }
             SKColor[] colors = new[]
             {
                 SKColor.Parse("#FF5C5C"),
@@ -63,16 +84,26 @@ namespace LIBRARY_MANAGEMENT_SYSTEM.AdminUI
             };
 
             var whiteTextPaint = new SolidColorPaint(SKColors.White);
-
-            ColumnSeries = genres.Select((genre, index) => new ColumnSeries<ObservableValue>
+            
+            Series = genreCounts.Select((kvp, index) => new PieSeries<int>
             {
-                Values = new[] { bookCounts[index] },
-                Name = genre,
-                Fill = new SolidColorPaint(colors[index]),
+                Values = new[] { kvp.Value },
+                Name = kvp.Key,
+                Fill = new SolidColorPaint(colors[index % colors.Length]),
+                DataLabelsSize = 11,
+                DataLabelsPosition = PolarLabelsPosition.Outer,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
+            }).ToArray();
+
+            ColumnSeries = genreCounts.Select((kvp, index) => new ColumnSeries<ObservableValue>
+            {
+                Values = new[] { new ObservableValue(kvp.Value) },
+                Name = kvp.Key,
+                Fill = new SolidColorPaint(colors[index % colors.Length]),
                 MaxBarWidth = 60,
                 DataLabelsPaint = whiteTextPaint,
                 DataLabelsSize = 11,
-                DataLabelsPosition = LiveChartsCore.Measure.DataLabelsPosition.Top
+                DataLabelsPosition = DataLabelsPosition.Top
             }).ToArray();
 
 

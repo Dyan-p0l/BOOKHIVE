@@ -50,7 +50,7 @@
                             <ListBoxItem>Science</ListBoxItem>
                             <ListBoxItem>Engineering</ListBoxItem>
                             <ListBoxItem>Computer Programming</ListBoxItem>
-                            <ListBoxItem>Science Fiction</ListBoxItem>
+                            
                         </ListBox>
                     </ScrollViewer>
                 </Border>

@@ -23,8 +23,8 @@
                     Series="{Binding ColumnSeries}" 
                     XAxes="{Binding XAxes}" 
                     YAxes="{Binding YAxes}" HorizontalAlignment="Center" Margin="0,10,0,0" Width="557" />
-                <Label Content="FICTION" HorizontalAlignment="Left" Height="23" Margin="123,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White"/>
-                <Label Content="SCIENCE" HorizontalAlignment="Left" Height="23" Margin="179,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
+                <Label Content="ACTION" HorizontalAlignment="Left" Height="23" Margin="123,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White"/>
+                <Label Content="ROMAN" HorizontalAlignment="Left" Height="23" Margin="179,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
                 <Label Content="HISTORY" HorizontalAlignment="Left" Height="23" Margin="236,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
                 <Label Content="ENGINEERING" HorizontalAlignment="Left" Height="23" Margin="292,184,0,0" VerticalAlignment="Top" Width="83" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
                 <Label Content="SCI-FI" HorizontalAlignment="Left" Height="23" Margin="376,184,0,0" VerticalAlignment="Top" Width="56" Foreground="White" RenderTransformOrigin="1.365,0.636"/>
